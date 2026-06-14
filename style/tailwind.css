@@ -36,8 +36,9 @@
     .hero-section::before {@apply content-[''] hidden lg:block absolute -top-30 right-0 z-[-999] rotate-45 blur-[52px] w-24 h-[440px] bg-linear-to-b from-[#FF974D99] from-80% to-[#FF974D00]} */
 
     .primary-button { @apply py-5 px-6 sm:px-8 bg-linear-to-r from-primary to-[#F19E18] rounded-full text-white text-lg leading-none whitespace-nowrap font-medium active:shadow-none transition-all shadow-gradientbtn duration-300 hover:to-primary hover:from-[#F19E18]}
-
     .outline-button {@apply py-5 px-6 sm:px-8 shadow-outlinebtn hover:bg-linear-to-r hover:from-[#F19E18] hover:to-primary border hover:border-transparent border-[#F19E18] rounded-full text-[#F19E18] leading-none whitespace-nowrap hover:text-white text-base font-bold transition-all duration-300}
+
+    .ecosystem-layout {@apply flex flex-wrap gap-4}
 
 }
 
