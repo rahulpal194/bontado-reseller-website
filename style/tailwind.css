@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme{
+    --font-client: 'Zalando', sans-serif;
+    --font-iconly: 'Iconly';
+    --color-primary: rgba(243, 104, 5, 1);
+
+    --color-paragraph: rgba(110, 113, 145, 1);
+    --color-heading: rgba(31, 31, 57, 1);
+    --shadow-header: 0px 6px 32px 0px rgba(0, 0, 0, 0.04);
+    --shadow-gradientbtn: 0px 12px 32px 0px rgba(255, 151, 77, 0.25);
+    --shadow-outlinebtn: 0px 12px 32px 0px rgba(23, 31, 70, 0.08);
+    --shadow-btn: 0px 8px 40px 0px rgba(23, 31, 70, 0.08);
+    --shadow-dropdown: 0px 6px 32px 0px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0px 6px 32px 0px rgba(0, 0, 0, 0.04);
+
+}
+
+@layer base{
+    html {@apply scroll-smooth sm:overflow-x-auto overflow-x-hidden}
+    body {@apply font-client  text-heading scroll-smooth! sm:overflow-x-visible overflow-x-hidden}
+    .db-header.fixed > nav { @apply bg-white shadow-header rounded-full backdrop-blur-[20px]}
+    .db-header { @apply fixed top-0 left-0 z-30 w-full transition-all duration-300 }
+    /* .db-header::before { content: ''; @apply absolute inset-0 -z-10 backdrop-blur-[20px] } */
+    .section-title { @apply text-sm font-medium border border-[#EFF0F6] bg-[#FCFCFC] rounded-full px-4 py-2 leading-tight mb-6 block mx-auto w-fit}
+
+    .dropdown-group { @apply relative leading-0}
+    .dropdown-btn { @apply cursor-pointer }
+    .dropdown-list { @apply scale-y-0 opacity-0 transition-all duration-300 origin-top bg-white}
+    .dropdown-list.active { @apply scale-y-100 opacity-100 }
+
+    .sticky-header { @apply backdrop-blur-[100px] shadow-header bg-linear-90 from-white/90 from-0% to-white/50}
+
+    .hero-section {@apply bg-linear-to-b from-[#FFF7F0] to-white/10}
+    /* .hero-section::after {@apply content-[''] hidden lg:block absolute -top-30 left-0 z-[-999] -rotate-45 blur-[52px] w-24 h-[440px] bg-linear-to-b from-[#FF974D99] from-80% to-[#FF974D00]}
+    .hero-section::before {@apply content-[''] hidden lg:block absolute -top-30 right-0 z-[-999] rotate-45 blur-[52px] w-24 h-[440px] bg-linear-to-b from-[#FF974D99] from-80% to-[#FF974D00]} */
+
+    .primary-button { @apply py-5 px-6 sm:px-8 bg-linear-to-r from-primary to-[#F19E18] rounded-full text-white text-lg leading-none whitespace-nowrap font-medium active:shadow-none transition-all shadow-gradientbtn duration-300 hover:to-primary hover:from-[#F19E18]}
+
+    .outline-button {@apply py-5 px-6 sm:px-8 shadow-outlinebtn hover:bg-linear-to-r hover:from-[#F19E18] hover:to-primary border hover:border-transparent border-[#F19E18] rounded-full text-[#F19E18] leading-none whitespace-nowrap hover:text-white text-base font-bold transition-all duration-300}
+
+}
+
+@layer utilities{
+    .container { @apply max-w-[1220] mx-auto px-5 sm:px-6}
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    @apply fixed inset-0 z-50 pointer-events-none;
+}
+.mobile-menu.active {
+    @apply pointer-events-auto;
+}
+
+.mobile-menu-backdrop {
+    @apply absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 backdrop-blur-sm;
+}
+.mobile-menu.active .mobile-menu-backdrop {
+    @apply opacity-100;
+}
+
+.mobile-menu-panel {
+    @apply absolute top-0 right-0 w-[85%] max-w-[360px] h-full bg-white p-6 shadow-2xl translate-x-full transition-transform duration-300 ease-out overflow-y-auto;
+}
+.mobile-menu.active .mobile-menu-panel {
+    @apply translate-x-0;
+}
+
+body.menu-open {
+    @apply overflow-hidden;
+}

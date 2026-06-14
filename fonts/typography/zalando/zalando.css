@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Zalando';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: url(ZalandoSans-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Zalando';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(ZalandoSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Zalando';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url(ZalandoSans-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Zalando';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: url(ZalandoSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Zalando';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url(ZalandoSans-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Zalando';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 800;
+    src: url(ZalandoSans-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Zalando';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 900;
+    src: url(ZalandoSans-Black.ttf) format('truetype');
+}
