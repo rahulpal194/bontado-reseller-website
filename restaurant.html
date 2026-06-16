@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="/fonts/typography/zalando/zalando.css">
     <script defer src="/js/script.js"></script>
     <script defer src="/js/dropdown.js"></script>
-    <script defer src="/js/mobile-menu.js"></script>
+    <script defer src="/js/drawer.js"></script>
     <title>Restaurant</title>
 </head>
 <body>
     <header class="w-full top-4 db-header">
-        <nav class="flex justify-between items-center container z-30 p-3 transition-all duration-200">
-            <a href="#">
+        <div class="container">
+            <nav class="flex justify-between items-center container z-30 p-3! transition-all duration-200">
+            <a href="#" class="ml-3">
                 <img src="/images/logo.png">
             </a>
             <ul class="text-base font-medium hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
@@ -40,6 +41,7 @@
                         </li>
                     </ul>
                 </div>
+                <button class="primary-button h-10 lg:h-12 px-6! flex items-center">Login</button>
                 <button id="mobile-menu-btn" data-drawer="#mobile-menu" class="lg:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 rounded-lg cursor-pointer" aria-label="Toggle menu">
                     <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
                     <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
@@ -47,11 +49,12 @@
                 </button>
             </div>
         </nav>
+        </div>
     </header>
 
     <div id="mobile-menu" class="drawer">
         <div class="drawer-content">
-            <div class="flex justify-between items-center mb-8 px-1">
+            <div class="flex justify-between items-center mb-8">
                 <a href="#">
                     <img src="/images/logo.png" class="h-8">
                 </a>
@@ -59,30 +62,27 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
             </div>
-            <ul class="flex flex-col gap-2 h-[calc(100dvh-275px)] overflow-y-auto">
-                <li><a href="" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Home</a></li>
-                <li><a href="" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Restaurant</a></li>
-                <li><a href="" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Partner</a></li>
+            <ul class="flex flex-col gap-2">
+                <li><a href="/index.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Home</a></li>
+                <li><a href="/restaurant.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Restaurant</a></li>
+                <li><a href="/partner.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Partner</a></li>
                 <li><a href="" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">About Us</a></li>
                 <li><a href="" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Contact Us</a></li>
             </ul>
-            <div class="mt-8 flex flex-col gap-3 px-1">
-                <button class="primary-button w-full text-center">I run a restaurant</button>
-                <button class="outline-button w-full text-center">I am an agency or reseller</button>
-            </div>
         </div>
     </div>
 
     <!--========================
           HERO PART START
     ==========================-->
-    <section class="hero-section pb-24 pt-40">
-        <span class="max-w-[278px] w-full aspect-square rounded-full bg-[#FFC9A3] absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 blur-[200px]"></span>
+    <section class="hero-section pb-12 sm:pb-24 pt-40">
+        <span class="center-glow"></span>
         <div class="container">
-            <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
-                <div class="basis-1/2">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-12">
+                <div class="basis-2/3 flex flex-col lg:justify-start justify-center">
+                    <span class="section-title mx-0! self-center lg:self-start">For Independent Restaurant</span>
                     <h1 class="hero-heading"><span class="font-semibold">Your own online ordering.</span> Zero commissions. Plus extra orders when you want them.</h1>
-                    <p class="hero-description">Take orders directly through your own branded website and app — and list on the Bontado marketplace whenever you want more reach. You keep your customers, your data, and your margin.</p>
+                    <p class="hero-description max-w-[550px]">Take orders directly through your own branded website and app — and list on the Bontado marketplace whenever you want more reach. You keep your customers, your data, and your margin.</p>
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-y-3 gap-x-6">
                         <button class="primary-button w-full sm:w-auto">Start Free</button>
                         <button class="outline-button w-full sm:w-auto">Book a Demo</button>
@@ -98,161 +98,162 @@
            HERO PART END
     ==========================-->
 
-
-    <section class="relative py-24">
-        <span class="section-title">How It Works</span>
+    <!--========================
+        PROBLEM PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <span class="section-title">The Problem</span>
         <div class="container">
             <div class="max-w-[790px] mx-auto mb-12">
-                 <h1 class="section-heading text-center">Launch your ordering platform in days, not months</h1>
-                 <p class="section-description">Whether you run a restaurant or an agency of 200 clients, Bontado removes the technical complexity - no developers, no integrations, no waiting.</p>
+                 <h1 class="section-heading text-center">Delivery apps take up to 30% of every order and keep your customers</h1>
+                 <p class="section-description">Every order through an aggregator is margin you lose and a customer you never own. Bontado flips that: orders come through your channel, and the relationship stays yours.</p>
             </div>
-            <div class="mt-20 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[1198px] mx-auto">
-                <div class="card p-10! rounded-[20px]! shadow-card">
-                  <div class="flex items-center justify-between mb-2">
-                    <span class="text-[#6e7191] font-ui font-medium text-[13px]">The old way</span>
-                    <span class="text-[#6e7191] font-ui font-medium text-[13px]">30% bite</span>
-                  </div>
-                  <h3 class="text-[#1f1f39] mb-8 font-display font-semibold text-[28px]">
-                    Traditional Aggregators
-                  </h3>
-                  <ul class="flex flex-col gap-4">
-                      <li key={item} class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
-                        </div>
-                        <span class="text-[#6e7191] font-body font-normal text-[16px]">High commissions (up to 30%)</span>
-                      </li>
-                      <li key={item} class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
-                        </div>
-                        <span class="text-[#6e7191] font-body font-normal text-[16px]">No brand ownership</span>
-                      </li>
-                      <li key={item} class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
-                        </div>
-                        <span class="text-[#6e7191] font-body font-normal text-[16px]">Limited customer data</span>
-                      </li>
-                      <li key={item} class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
-                        </div>
-                        <span class="text-[#6e7191] font-body font-normal text-[16px]">Dependency on third-party platforms</span>
-                      </li>
-                      <li key={item} class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
-                        </div>
-                        <span class="text-[#6e7191] font-body font-normal text-[16px]">Customers belong to the aggregator</span>
-                      </li>
-                  </ul>
-                </div>
-                <div class="relative rounded-[20px] p-10 overflow-hidden bg-linear-to-br from-[#fff8f2] via-white to-[#fff1e2] border border-[#ffd9b8] shadow-[0px_16px_40px_rgba(255,151,77,0.18)]">
-                  <div class="absolute -top-20 -right-20 w-[280px] h-[280px] rounded-full bg-[#ffd9b8] opacity-40 blur-3xl pointer-events-none"></div>
-                  <div class="relative">
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[1198px] mx-auto">
+                <div class="card shadow-card">
                     <div class="flex items-center justify-between mb-2">
-                      <span class="text-[#f36805] font-ui font-medium text-[13px]">
-                        The Bontado way
-                      </span>
+                      <span class="text-paragraph font-medium text-sm">What you give up</span>
+                      <span class="text-paragraph font-medium text-sm">30% bite</span>
                     </div>
-                    <h3 class="text-[#1f1f39] mb-8 font-display font-semibold text-[28px]">Bontado</h3>
-                    <ul class="flex flex-col gap-4">
+                    <h3 class="text-heading mb-8 font-semibold text-[26px] leading-tight">
+                      Traditional Delivery Apps
+                    </h3>
+                    <ul class="flex flex-col gap-3">
                         <li key={item} class="flex items-start gap-3">
-                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#f36805] to-[#f19e18] flex items-center justify-center mt-0.5 shadow-[0px_4px_10px_rgba(255,151,77,0.35)]">
-                            <Check class="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
+                          <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
                           </div>
-                          <span class="text-[#1f1f39] font-ui font-medium text-[16px]">Own branded website and app</span>
+                          <span class="text-paragraph text-base leading-tight">High commissions (up to 30%)</span>
                         </li>
                         <li key={item} class="flex items-start gap-3">
-                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#f36805] to-[#f19e18] flex items-center justify-center mt-0.5 shadow-[0px_4px_10px_rgba(255,151,77,0.35)]">
-                            <Check class="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
+                          <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
                           </div>
-                          <span class="text-[#1f1f39] font-ui font-medium text-[16px]">Full customer ownership</span>
+                          <span class="text-paragraph text-base leading-tight">No brand ownership</span>
                         </li>
                         <li key={item} class="flex items-start gap-3">
-                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#f36805] to-[#f19e18] flex items-center justify-center mt-0.5 shadow-[0px_4px_10px_rgba(255,151,77,0.35)]">
-                            <Check class="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
+                          <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
                           </div>
-                          <span class="text-[#1f1f39] font-ui font-medium text-[16px]">Commission-free direct orders</span>
+                          <span class="text-paragraph text-base leading-tight">Limited customer data</span>
                         </li>
                         <li key={item} class="flex items-start gap-3">
-                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#f36805] to-[#f19e18] flex items-center justify-center mt-0.5 shadow-[0px_4px_10px_rgba(255,151,77,0.35)]">
-                            <Check class="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
+                          <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
                           </div>
-                          <span class="text-[#1f1f39] font-ui font-medium text-[16px]">Optional marketplace demand</span>
+                          <span class="text-paragraph text-base leading-tight">Dependency on third-party platforms</span>
+                        </li>
+                        <li key={item} class="flex items-start gap-3">
+                          <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
+                          </div>
+                          <span class="text-paragraph text-base leading-tight">Customers belong to the aggregator</span>
                         </li>
                     </ul>
-                  </div>
+                </div>
+                <div class="relative card shadow-card overflow-hidden border-[#FFE9E1] bg-linear-to-r from-white to-[#FFF5F1]">
+                    <div class="cta-glow-2"></div>
+                    <span class="text-primary font-medium text-sm">What you keep</span>
+                    <h3 class="text-heading mb-8 font-semibold text-[26px] leading-tight">Your Channel, Your Customers</h3>
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex items-start gap-3">
+                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#FF4800] to-[#FF004D] flex items-center justify-center shrink-0">
+                          </div>
+                          <span class="text-heading font-medium text-base leading-tight">Own branded website and app</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#FF4800] to-[#FF004D] flex items-center justify-center shrink-0">
+                          </div>
+                          <span class="text-heading font-medium text-base leading-tight">Full customer ownership</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#FF4800] to-[#FF004D] flex items-center justify-center shrink-0">
+                          </div>
+                          <span class="text-heading font-medium text-base leading-tight">Commission-free direct orders</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#FF4800] to-[#FF004D] flex items-center justify-center shrink-0">
+                          </div>
+                          <span class="text-heading font-medium text-base leading-tight">Optional marketplace demand</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                          <div class="w-6 h-6 rounded-full bg-linear-to-br from-[#FF4800] to-[#FF004D] flex items-center justify-center shrink-0">
+                          </div>
+                          <span class="text-heading font-medium text-base leading-tight">Optional marketplace demand</span>
+                        </li>
+                    </ul>
+                </div>
                 </div>
             </div>
         </div>
     </section>
-
-
+    <!--========================
+        PROBLEM PART START
+    ==========================-->
 
     <!--========================
-        ECOSYSTEM PART START
+        WHAT YOU GET PART START
     ==========================-->
-    <section class="relative py-24 bg-linear-to-b from-white to-[#FFF7F0]">
-        <span class="section-title">Platform Ecosystem</span>
+    <section class="relative py-12 sm:py-24 bg-linear-to-b from-white to-[#FFF7F0]">
+        <span class="section-title">What You Get</span>
         <div class="container">
-            <div class="max-w-[790px] mx-auto mb-12">
-                 <h1 class="section-heading text-center">Everything you need to run and grow your ordering business</h1>
-                 <p class="section-description">One connected platform that replaces a stack of disconnected tools — from your storefront to your kitchen to your customers.</p>
+            <div class="max-w-[720px] mx-auto mb-12">
+                 <h1 class="section-heading text-center">Everything you need to sell directly</h1>
+                 <p class="section-description">From your branded storefront to loyalty, payments, and a unified order dashboard — every tool your restaurant needs is included, with nothing extra to buy.</p>
             </div>
             <div class="ecosystem-layout">  
-                <div class="rounded-2xl border border-[#FFE9E1] p-8 bg-linear-to-br from-[#FFF5F1] to-white shadow-card relative z-10 group md:flex-[1_1_40%]">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <div class="md:flex-[1_1_40%]">
+                    <div class="card border-[#FFE9E1] bg-linear-to-br from-[#FFF5F1] to-white shadow-card group ">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
                         </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Branded Ordering Website</h6>
+                        <p class="text-base text-paragraph leading-tight mb-8">A fast, conversion-optimized branded website with your menu, photos, and checkout — live on your own domain.</p>
+                        <img src="images/PlatformEcosystem.png" alt="Website Preview" class="w-full h-auto rounded-xl">
                     </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Ordering Website</h6>
-                    <p class="text-base text-paragraph leading-tight mb-6">A fast, conversion-optimized branded website with your menu, photos, and checkout — live on your own domain.</p>
-                    <img src="images/PlatformEcosystem.png" alt="Website Preview" class="w-full h-auto rounded-xl">
                 </div>
-                <div class="md:flex-[1_1_calc(25%-0.5rem)] gap-4 flex flex-col">
+                <div class="md:flex-[1_1_calc(25%-0.5rem)] gap-6 flex flex-col">
                     <div class="card group shadow-card">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </div>
                         </div>
-                    </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Customer Mobile App</h6>
-                    <p class="text-base text-paragraph leading-tight">iOS and Android apps for your customers — push notifications, loyalty, and re-orders included.</p>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Installable Mobile App (PWA)</h6>
+                        <p class="text-base text-paragraph leading-tight">iOS and Android apps for your customers — push notifications, loyalty, and re-orders included.</p>
                     </div>
                     <div class="card group shadow-card">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            </div>
                         </div>
-                    </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">QR Ordering</h6>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Cart, Checkout & Payments</h6>
                     <p class="text-base text-paragraph leading-tight">Let dine-in guests scan, order, and pay from their seat — no waiter required.</p>
                     </div>
                 </div>
-                <div class="flex md:flex-nowrap flex-wrap gap-4">
+                <div class="flex md:flex-nowrap flex-wrap gap-6">
                     <div class="card group shadow-card">
                     <div class="flex justify-between items-start mb-8">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
+                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
                         </div>
                     </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Menu & Store Builder</h6>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">Loyalty & One-tap Reorder</h6>
                     <p class="text-base text-paragraph leading-tight">Visually build and manage your menu with categories, modifiers, combos, and images — no coding required.</p>
                     </div>
                     <div class="card group shadow-card">
                     <div class="flex justify-between items-start mb-8">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
+                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
                         </div>
                     </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Menu & Store Builder</h6>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">Marketplace Listing</h6>
                     <p class="text-base text-paragraph leading-tight">Visually build and manage your menu with categories, modifiers, combos, and images — no coding required.</p>
                     </div>
                     <div class="card group shadow-card">
                     <div class="flex justify-between items-start mb-8">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
+                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
                         </div>
                     </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Menu & Store Builder</h6>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">Unified Order Dashboard</h6>
                     <p class="text-base text-paragraph leading-tight">Visually build and manage your menu with categories, modifiers, combos, and images — no coding required.</p>
                     </div>
                 </div>
@@ -260,22 +261,65 @@
         </div>
     </section>
     <!--========================
-        ECOSYSTEM PART END
+        WHAT YOU GET PART END
     ==========================-->
 
+    <!--========================
+        MARKETPLACE PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <div class="container">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-10 pt-12">
+                <div class="flex-1 flex flex-col items-center lg:items-start">
+                    <span class="section-title mx-0! lg:self-start self-center">Marketplace Advantage</span>
+                    <h1 class="section-heading mb-6! text-center lg:text-left">Extra orders, on your terms</h1>
+                    <p class="section-description lg:text-left text-center">Switch the marketplace on for more discovery, off whenever you like. Fair flat terms — not a 30% commission trap. Your customers and their data stay with you, not the platform.</p>
+                    <div class="grid grid-cols-1 gap-4 mt-6">
+                        <div class="flex gap-3 items-center">
+                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"></div>
+                            <div>
+                                <span class="text-lg font-medium">Flip on demand in one click</span>
+                                <p class="text-sm text-paragraph">Toggle marketplace visibility instantly when you want more orders.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"></div>
+                            <div>
+                                <span class="text-lg font-medium">Flat, transparent fees</span>
+                                <p class="text-sm text-paragraph">Toggle marketplace visibility instantly when you want more orders.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"></div>
+                            <div>
+                                <span class="text-lg font-medium">You keep the customer</span>
+                                <p class="text-sm text-paragraph">Toggle marketplace visibility instantly when you want more orders.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <img class="w-auto h-auto" src="/images/marektplace.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+        MARKETPLACE PART END
+    ==========================-->
 
     <!--========================
         HOW WORKS PART START
     ==========================-->
-    <section class="relative py-24">
+    <section class="relative py-12 sm:py-24">
         <span class="section-title">How It Works</span>
         <div class="container">
             <div class="max-w-[790px] mx-auto mb-12">
-                 <h1 class="section-heading text-center">Launch your ordering platform in days, not months</h1>
-                 <p class="max-w-[635px] section-description">Whether you run a restaurant or an agency of 200 clients, Bontado removes the technical complexity - no developers, no integrations, no waiting.</p>
+                 <h1 class="section-heading text-center">Live in days, not weeks</h1>
+                 <p class="max-w-[635px] section-description">Three simple steps is all it takes to replace your delivery-app dependency with a branded ordering channel that's fully yours.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card shadow-card relative z-10">
+                <div class="card shadow-card">
                     <div class="absolute top-auto max-md:-bottom-4 max-md:left-1/2 max-md:-translate-x-1/2 md:top-1/2 md:-right-4 md:-translate-y-1/2 w-8 h-8 rounded-full text-primary border border-[#EFF0F6] bg-white flex items-center justify-center max-md:rotate-90">
                         →
                     </div>
@@ -283,10 +327,10 @@
                         <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl"></div>
                         <span class="text-base font-medium text-[#A0A3BD]">01</span>
                     </div>
-                    <h6 class="text-[22px] font-semibold leading-none mb-2">Create Your Brand</h6>
+                    <h6 class="text-[22px] font-semibold leading-none mb-3">Add Your Menu</h6>
                     <p class="text-base text-paragraph leading-tight">Set up your website, mobile app, domain, and branding in minutes — fully yours, no aggregator logos.</p>
                 </div>
-                <div class="card shadow-card relative z-10">
+                <div class="card shadow-card">
                     <div class="absolute top-auto max-md:-bottom-4 max-md:left-1/2 max-md:-translate-x-1/2 md:top-1/2 md:-right-4 md:-translate-y-1/2 w-8 h-8 rounded-full text-primary border border-[#EFF0F6] bg-white flex items-center justify-center max-md:rotate-90">
                         →
                     </div>
@@ -294,15 +338,15 @@
                         <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl"></div>
                         <span class="text-base font-medium text-[#A0A3BD]">02</span>
                     </div>
-                    <h6 class="text-[22px] font-semibold leading-none mb-2">Accept Orders</h6>
+                    <h6 class="text-[22px] font-semibold leading-none mb-3">Brand Your Storefront</h6>
                     <p class="text-base text-paragraph leading-tight">Online ordering, pickup, and delivery management — all in one dashboard built for restaurants.</p>
                 </div>
-                <div class="card shadow-card relative z-10">
+                <div class="card shadow-card">
                     <div class="flex justify-between items-center mb-6">
                         <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl"></div>
                         <span class="text-base font-medium text-[#A0A3BD]">03</span>
                     </div>
-                    <h6 class="text-[22px] font-semibold leading-none mb-2">Grow Revenue</h6>
+                    <h6 class="text-[22px] font-semibold leading-none mb-3">Go Live & Take Orders</h6>
                     <p class="text-base text-paragraph leading-tight">Switch on marketplace visibility, retain customers with smart tools, and track everything with analytics.</p>
                 </div>
             </div>
@@ -312,110 +356,116 @@
         HOW WORKS PART END
     ==========================-->
 
-
-        <!--========================
-        ECOSYSTEM PART START
+    <!--========================
+       WHY BONTADO PART START
     ==========================-->
-    <section class="relative py-24 bg-linear-to-b from-white to-[#FFF7F0]">
-        <span class="section-title">Platform Ecosystem</span>
+    <section class="relative py-12 sm:py-24 bg-linear-to-b from-white to-[#FFF7F0]">
+        <span class="section-title">Why Bontado</span>
         <div class="container">
             <div class="max-w-[790px] mx-auto mb-12">
-                 <h1 class="section-heading text-center">Everything you need to run and grow your ordering business</h1>
-                 <p class="section-description">One connected platform that replaces a stack of disconnected tools — from your storefront to your kitchen to your customers.</p>
+                 <h1 class="section-heading text-center">Built for restaurant owners, not aggregators</h1>
+                 <p class="section-description">We put ownership back in your hands — your brand, your customers, your data, your revenue. No middlemen taking a cut of every order you worked hard to earn.</p>
             </div>
             <div class="ecosystem-layout">  
-                <div class="rounded-2xl border border-[#FFE9E1] p-8 bg-linear-to-br from-[#FFF5F1] to-white shadow-card relative z-10 group md:flex-[1_1_40%]">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <div class="flex-auto md:flex-[1_1_40%]">
+                    <div class="card border-[#FFE9E1] bg-linear-to-br from-[#FFF5F1] to-white shadow-card group relative overflow-hidden">
+                        <div class="cta-glow-2"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
                         </div>
-                    </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Ordering Website</h6>
-                    <p class="text-base text-paragraph leading-tight mb-6">A fast, conversion-optimized branded website with your menu, photos, and checkout — live on your own domain.</p>
-                    <img src="images/PlatformEcosystem.png" alt="Website Preview" class="w-full h-auto rounded-xl">
-                </div>
-                <div class="md:flex-[1_1_calc(25%-0.5rem)] gap-4 flex flex-col">
-                    <div class="card group shadow-card">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                        </div>
-                    </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Customer Mobile App</h6>
-                    <p class="text-base text-paragraph leading-tight">iOS and Android apps for your customers — push notifications, loyalty, and re-orders included.</p>
-                    </div>
-                    <div class="card group shadow-card">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-                        </div>
-                    </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">QR Ordering</h6>
-                    <p class="text-base text-paragraph leading-tight">Let dine-in guests scan, order, and pay from their seat — no waiter required.</p>
+                        <h6 class="text-[22px] font-semibold leading-none mb-4">Keep every euro</h6>
+                        <p class="text-base text-paragraph leading-tight mb-8 max-w-[380px]">Commission-free ordering through your own channel. The 30% you used to lose every month? That stays in your pocket — every single order, forever.</p>
+                        <p class="text-base font-medium flex items-center gap-3 mb-8"><span class="hero-heading font-semibold mb-0! bg-linear-to-r from-primary to-[#FF004D] bg-clip-text text-transparent">0%</span> commission on direct orders</p>
                     </div>
                 </div>
-                <div class="flex md:flex-nowrap flex-wrap gap-4">
+                <div class="flex-auto md:flex-[1_1_calc(25%-0.5rem)] gap-6 flex flex-col">
                     <div class="card group shadow-card">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </div>
                         </div>
-                    </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Menu & Store Builder</h6>
-                    <p class="text-base text-paragraph leading-tight">Visually build and manage your menu with categories, modifiers, combos, and images — no coding required.</p>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Own your customers</h6>
+                        <p class="text-base text-paragraph leading-tight">Their data stays with you, never an aggregator.</p>
                     </div>
                     <div class="card group shadow-card">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center text-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            </div>
                         </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Get found</h6>
+                    <p class="text-base text-paragraph leading-tight">Optional marketplace demand whenever you want more orders.</p>
                     </div>
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Menu & Store Builder</h6>
-                    <p class="text-base text-paragraph leading-tight">Visually build and manage your menu with categories, modifiers, combos, and images — no coding required.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-auto">
+                    <div class="card group shadow-card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                            </div>
+                        </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Keep them coming back</h6>
+                        <p class="text-base text-paragraph leading-tight">Built-in loyalty and one-tap reorder.</p>
+                    </div>
+                    <div class="card group shadow-card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                            </div>
+                        </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Your brand, your app</h6>
+                        <p class="text-base text-paragraph leading-tight">A storefront and app that look like your business.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!--========================
-        ECOSYSTEM PART END
+       WHY BONTADO PART END
     ==========================-->
 
-
-    <section class="relative py-24">
+    <!--========================
+       MIGRATION PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
         <div class="container">
-            <div class="relative rounded-[28px] overflow-hidden bg-heading p-10 md:p-16">
-                <div class="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-[#f36805] opacity-25 blur-[120px] pointer-events-none"></div>
-                <div class="absolute -bottom-32 -right-32 w-[480px] h-[480px] rounded-full bg-[#f19e18] opacity-20 blur-[120px] pointer-events-none"></div>
-                <div class="flex justify-between items-center relative z-10">
-                    <div class="flex flex-col items-start max-w-[590px]">
+            <div class="relative rounded-[28px] overflow-hidden bg-heading p-8 md:p-16">
+                <div class="cta-glow-1"></div>
+                <div class="cta-glow-2"></div>
+                <div class="flex gap-5 md:justify-between justify-center flex-wrap items-center relative z-10">
+                    <div class="flex flex-col items-center md:items-start  max-w-[590px]">
                         <div class="flex gap-2 items-center mb-6">
                             <span class="transparent-title">Migration</span>
                             <span class="transparent-title bg-primary!">Free migration</span>
                             <span class="transparent-title">Zero downtime</span>
                         </div>
-                        <h2 class="section-heading text-white mb-4!">Coming from GloriaFood?</h2>
-                        <p class="section-description text-white/70! lg:text-left text-center">GloriaFood retires April 30, 2027. Move now — we migrate your menu for free, with no downtime. Our team handles the heavy lifting so you don't miss an order.</p>
+                        <h2 class="section-heading text-white mb-4! text-center md:text-left">Coming from GloriaFood?</h2>
+                        <p class="section-description text-white/70! md:text-left text-center">GloriaFood retires April 30, 2027. Move now — we migrate your menu for free, with no downtime. Our team handles the heavy lifting so you don't miss an order.</p>
                     </div>
                     <button class="primary-button">Talk to migration team</button>
                 </div>
             </div>
         </div>
     </section>
-
+    <!--========================
+       MIGRATION PART END
+    ==========================-->
 
     <!--========================
-        HOW WORKS PART START
+        PRICING PART START
     ==========================-->
-    <section class="relative py-24">
+    <section class="relative py-12 sm:py-24">
         <span class="section-title">Pricing</span>
         <div class="container">
             <div class="max-w-[790px] mx-auto mb-12">
-                 <h1 class="section-heading text-center">Simple, transparent pricing</h1>
-                 <p class="max-w-[635px] section-description">Choose the plan that fits your restaurant. No commission on direct orders, no hidden fees.</p>
+                <h1 class="section-heading text-center">Simple, transparent pricing</h1>
+                <p class="max-w-[635px] section-description">Choose the plan that fits your restaurant. No commission on direct orders, no hidden fees.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div class="card rounded-3xl! shadow-card relative z-10 group">
+                <div class="card rounded-3xl! shadow-card relative z-10 group hover:bg-linear-to-br from-[#FFF5F1] to-white transition-all duration-200 hover:border-[#FFE9E1]">
                     <h6 class="text-[26px] font-semibold leading-none mb-2">Starter</h6>
                     <p class="text-base text-paragraph leading-tight mb-6">For single locations getting online.</p>
                     <h6 class="text-[42px] font-medium leading-tight">10$<sub class="text-sm text-paragraph">/month</sub></h6>
@@ -441,10 +491,11 @@
                             <span class="text-[16px]">Email support</span>
                         </li>
                     </ul>
-                    <button class="text-base font-medium w-full p-3 rounded-full border border-[#EFF0F6]">Start free</button>
+                    <button class="outline-hover-btn">Start free</button>
                 </div>
-                <div class="card rounded-3xl! shadow-card relative z-10">
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Starter</h6>
+                <div class="card rounded-3xl! shadow-card relative z-10 group bg-linear-to-br from-[#FFF5F1] to-white transition-all duration-200 border-[#FFE9E1]">
+                    <h6 class="text-[26px] font-semibold leading-none mb-2">Growth</h6>
+                    <span class="absolute top-6 right-6 bg-linear-to-r from-primary to-[#FF004D] text-white rounded-full font-medium text-[10px] px-2 py-1">Most popular</span>
                     <p class="text-base text-paragraph leading-tight mb-6">For single locations getting online.</p>
                     <h6 class="text-[42px] font-medium leading-tight">10$<sub class="text-sm text-paragraph">/month</sub></h6>
                     <ul class="flex flex-col gap-3 my-8">
@@ -469,10 +520,10 @@
                             <span class="text-[16px]">Email support</span>
                         </li>
                     </ul>
-                    <button class="text-base font-medium w-full p-3 rounded-full border border-[#EFF0F6]">Start free</button>
+                    <button class="outline-hover-btn">Start free</button>
                 </div>
-                <div class="card rounded-3xl! shadow-card relative z-10">
-                    <h6 class="text-[26px] font-semibold leading-none mb-2">Starter</h6>
+                <div class="card rounded-3xl! shadow-card relative z-10 group hover:bg-linear-to-br from-[#FFF5F1] to-white transition-all duration-200 hover:border-[#FFE9E1]">
+                    <h6 class="text-[26px] font-semibold leading-none mb-2">Premium</h6>
                     <p class="text-base text-paragraph leading-tight mb-6">For single locations getting online.</p>
                     <h6 class="text-[42px] font-medium leading-tight">10$<sub class="text-sm text-paragraph">/month</sub></h6>
                     <ul class="flex flex-col gap-3 my-8">
@@ -497,10 +548,10 @@
                             <span class="text-[16px]">Email support</span>
                         </li>
                     </ul>
-                    <button class="text-base font-medium w-full p-3 rounded-full border border-[#EFF0F6]">Start free</button>
+                    <button class="outline-hover-btn">Start free</button>
                 </div>
             </div>
-            <div class="flex gap-8 items-center  justify-center">
+            <div class="flex gap-3 sm:gap-8 items-center flex-col sm:flex-row justify-center">
                 <p class="text-paragraph text-sm">0% commission on direct orders</p>
                 <p class="text-paragraph text-sm">Transparent monthly pricing</p>
                 <p class="text-paragraph text-sm">No hidden fees</p>
@@ -508,22 +559,20 @@
         </div>
     </section>
     <!--========================
-        HOW WORKS PART END
+        PRICING PART END
     ==========================-->
-
 
     <!--========================
            CTA PART START
     ==========================-->
-    <section class="relative py-24">
+    <section class="relative py-12 sm:py-24">
         <div class="container">
-            <div class="relative rounded-[32px] overflow-hidden bg-linear-to-br from-[#FFFFFF] to-[#FFF5F1] border border-[#FFE9E1] p-10 md:p-16">
-                <div class="absolute -top-32 -left-32 w-[280px] h-[280px] rounded-full bg-[#f36805] opacity-25 blur-[120px] pointer-events-none"></div>
-                <div class="absolute -bottom-32 -right-32 w-[280px] h-[280px] rounded-full bg-[#f19e18] opacity-20 blur-[120px] pointer-events-none"></div>
+            <div class="cta-section">
+                <div class="cta-glow-1"></div>
+                <div class="cta-glow-2"></div>
                 <div class="max-w-[790px] mx-auto">
-                    <h2 class="text-heading text-center font-semibold text-[32px] md:text-[56px] leading-[40px] md:leading-[60px] mb-6">Start taking commission-free orders</h2>
-                    <p class="text-paragraph font-normal text-lg leading-tight text-center">Launch your branded ordering website and app, own your customer relationships, and grow on your terms.</p>
-                    
+                    <h2 class="hero-heading font-semibold text-center">Start taking commission-free orders</h2>
+                    <p class="section-description text-center">Launch your branded ordering website and app, own your customer relationships, and grow on your terms.</p>
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-3 gap-x-6 mt-8">
                         <button class="primary-button w-full sm:w-auto">Start Free</button>
                         <button class="outline-button w-full sm:w-auto">Book a Demo</button>
@@ -536,16 +585,15 @@
            CTA PART END
     ==========================-->
 
-
     <!--========================
          FOOTER PART START
     ==========================-->
-    <footer class="container pt-24">
-        <nav class="flex justify-between items-center container z-30 transition-all duration-200">
+    <footer class="container pt-12 sm:pt-24">
+        <nav class="flex justify-between flex-col gap-3 flex-wrap sm:flex-row items-center z-30 transition-all duration-200">
             <a href="#">
                 <img src="/images/logo.png">
             </a>
-            <ul class="text-base hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
+            <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
                 <li><a href="">Home</a></li>
                 <li><a href="">Restaurant</a></li>
                 <li><a href="">Partner</a></li>
@@ -559,14 +607,14 @@
             </div>
         </nav>
         <div class="border-t border-[#EFF0F6] py-7 mt-8">
-            <nav class="flex justify-between items-center container z-30 transition-all duration-200">
+            <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
                 <span class="text-base">© All rights reserved. Bontado.</span>
-            <ul class="text-base hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Terms of use</a></li>
-                <li><a href="">Back to top</a></li>
-            </ul>
-        </nav>
+                <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="#" class="back-to-top">Back to top</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
     <!--========================

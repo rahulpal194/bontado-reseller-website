@@ -17,7 +17,7 @@
 @layer base{
     html {@apply scroll-smooth sm:overflow-x-auto overflow-x-hidden}
     body {@apply font-client  text-heading scroll-smooth! sm:overflow-x-visible overflow-x-hidden}
-    .db-header.fixed > nav { @apply bg-white shadow-header rounded-full backdrop-blur-[20px]}
+    .db-header.fixed nav { @apply bg-white shadow-header rounded-full backdrop-blur-[20px]}
     .db-header { @apply fixed top-0 left-0 z-30 w-full transition-all duration-300 }
     .section-title { @apply text-sm font-medium border border-[#EFF0F6] bg-[#FCFCFC] rounded-full px-4 py-2 leading-tight mb-6 block mx-auto w-fit}
 
@@ -35,19 +35,30 @@
     .primary-button { @apply py-5 px-6 sm:px-8 bg-linear-to-r from-primary to-[#FF004D] rounded-full text-white text-lg leading-none font-medium active:shadow-none transition-all shadow-gradientbtn duration-300 hover:to-primary hover:from-[#FF004D]}
     .outline-button {@apply py-5 px-6 sm:px-8 shadow-outlinebtn bg-linear-to-r from-primary to-[#FF004D] bg-clip-text text-transparent hover:bg-clip-border hover:text-white border border-[#F19E18] hover:border-transparent rounded-full leading-none text-lg font-medium transition-all duration-300}
 
-    .ecosystem-layout {@apply flex flex-wrap gap-4}
+    .ecosystem-layout {@apply flex flex-wrap gap-6}
 
-    .hero-heading {@apply text-[32px] sm:text-[40px] lg:text-[54px] font-normal mb-6 lg:mb-8 leading-[38px] sm:leading-[46px] lg:leading-[60px] text-center lg:text-left}
+    .hero-heading {@apply text-[32px] sm:text-[40px] lg:text-[54px] font-normal mb-6 md:mb-8 leading-[38px] sm:leading-[46px] lg:leading-[60px] text-center lg:text-left}
     .hero-description {@apply text-sm sm:text-base lg:text-lg font-normal mb-8 lg:mb-12 text-center lg:text-left leading-tight}
-    .section-heading {@apply text-[32px] sm:text-[48px] font-semibold mb-6 lg:mb-8 leading-tight}
+    .section-heading {@apply text-[32px] sm:text-[48px] font-semibold mb-6 leading-tight}
     .section-description {@apply mx-auto text-center text-lg font-normal text-paragraph leading-tight}
     .card {@apply rounded-2xl border border-[#EFF0F6] p-8 bg-white relative z-10}
     .transparent-title {@apply inline-flex lg:self-start mx-auto lg:mx-0 bg-white/10 border border-white/15 backdrop-blur-md rounded-full px-4 py-2 font-medium text-sm text-white}
 
+    .cta-section {@apply relative rounded-[32px] overflow-hidden bg-linear-to-br from-[#FFFFFF] to-[#FFF5F1] border border-[#FFE9E1] p-10 md:p-16}
+    .cta-glow-1 {@apply absolute -top-32 -left-32 w-[280px] h-[280px] rounded-full bg-[#f36805] opacity-25 blur-[120px] pointer-events-none}
+    .cta-glow-2 {@apply absolute -bottom-32 -right-32 w-[280px] h-[280px] rounded-full bg-[#f19e18] opacity-20 blur-[120px] pointer-events-none}
+    .center-glow {@apply max-w-[278px] w-full aspect-square rounded-full bg-[#FFC9A3] absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 blur-[200px]}
+
+    .faq-item {@apply p-6 text-left w-full cursor-pointer bg-white border border-[#EFF0F6] rounded-2xl shadow-card transition-all duration-300}
+    .faq-text {@apply h-0 origin-top overflow-hidden transition-all duration-300 ease-in-out}
+    .icon-div {@apply w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center shrink-0}
+    .transparent-card {@apply rounded-[16px] bg-white/5 border border-white/10 backdrop-blur-md p-4 flex flex-col gap-3}
+
+    .outline-hover-btn {@apply text-base font-medium w-full p-3 rounded-full border border-[#EFF0F6] group-hover:bg-linear-to-r group-hover:from-primary group-hover:border-none group-hover:to-[#FF004D] group-hover:text-white transition-all duration-200 group-hover:shadow-gradientbtn}
 }
 
 @layer utilities{
-    .container { @apply max-w-[1220px] mx-auto px-5 sm:px-6}
+    .container { @apply max-w-[1246px] mx-auto px-5 sm:px-6}
 }
 
     /* DRAWER */

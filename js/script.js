@@ -9,53 +9,49 @@ window.addEventListener('scroll', function(){
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-    const faqItems = [...document.querySelectorAll(".faq-item")];
+    const faqs = [...document.querySelectorAll(".faq-item")];
 
-    faqItems.forEach((item) => {
+    faqs.forEach(item => {
         const body = item.querySelector(".faq-text");
-        if (!body) return;
-        body.dataset.height = body.scrollHeight + "px";
+        Object.assign(body.style, { height: "0px", overflow: "hidden", transition: "height .3s ease" });
+        body.dataset.h = body.scrollHeight + "px";
     });
 
-    const setIcon = (icon, isOpen) => {
-        const from = isOpen ? ["rotate-0", "bg-[#EFF0F6]", "gradient-text"] : ["rotate-180", "bg-[#FF4800]", "text-white"];
-        const to   = isOpen ? ["rotate-180", "bg-[#FF4800]", "text-white"] : ["rotate-0", "bg-[#EFF0F6]", "gradient-text"];
-        from.forEach((cls, i) => icon.classList.replace(cls, to[i]));
-    };
+    const isOpen = item => item.querySelector(".faq-text").style.height !== "0px";
 
-    const close = (item) => {
+    const toggle = (item, open) => {
         const body = item.querySelector(".faq-text");
-        const icon = item.querySelector(".icon-circle-down");
-        if (!body || body.classList.contains("h-0")) return;
+        const iconDiv = item.querySelector(".icon-div");
+        const icon = iconDiv?.querySelector("i");
 
-        body.style.height = body.scrollHeight + "px";
-        body.offsetHeight;
-        body.style.height = "0px";
-        body.classList.add("h-0");
-        icon && setIcon(icon, false);
-        item.classList.replace("border-[#FFCAB5]", "border-[#EFF0F6]");
+        if (open) body.style.height = body.dataset.h;
+        else { body.style.height = body.scrollHeight + "px"; body.offsetHeight; body.style.height = "0px"; }
+
+        iconDiv?.classList.toggle("bg-[#EFF0F6]", !open);
+        iconDiv?.classList.toggle("bg-[#FF4800]", open);
+        icon?.classList.toggle("rotate-180", open);
+        icon?.classList.toggle("text-white", open);
+        item.classList.toggle("border-[#FFCAB5]", open);
+        item.classList.toggle("border-[#EFF0F6]", !open);
+
+        if (open) body.addEventListener("transitionend", () => { body.style.height = "auto"; }, { once: true });
     };
 
-    const open = (item) => {
-        const body = item.querySelector(".faq-text");
-        const icon = item.querySelector(".icon-circle-down");
-        if (!body) return;
+    faqs.forEach(item => item.addEventListener("click", () => {
+        const wasOpen = isOpen(item);
+        faqs.forEach(f => isOpen(f) && toggle(f, false));
+        if (!wasOpen) toggle(item, true);
+    }));
 
-        body.classList.remove("h-0");
-        body.style.height = body.dataset.height;
-        icon && setIcon(icon, true);
-        item.classList.replace("border-[#EFF0F6]", "border-[#FFCAB5]");
-
-        body.addEventListener("transitionend", () => {
-            if (!body.classList.contains("h-0")) body.style.height = "";
-        }, { once: true });
-    };
-
-    faqItems.forEach((item) => {
-        item.addEventListener("click", () => {
-            const isOpen = !item.querySelector(".faq-text")?.classList.contains("h-0");
-            faqItems.forEach(close);
-            if (!isOpen) open(item);
+    // Smooth scroll to top for "Back to top" links
+    const backToTopLinks = document.querySelectorAll(".back-to-top");
+    backToTopLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
     });
 });
