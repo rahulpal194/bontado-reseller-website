@@ -28,33 +28,33 @@
 
     .sticky-header { @apply backdrop-blur-[100px] shadow-header bg-linear-90 from-white/90 from-0% to-white/50}
 
-    .hero-section {@apply bg-linear-to-b from-[#FFF7F0] to-white/10 overflow-hidden relative}
+    /* .hero-section {@apply bg-linear-to-b from-[#FFF7F0] to-white/10 overflow-hidden relative}
     .hero-section::after {@apply content-[''] hidden lg:block absolute -top-30 left-0 z-[-999] -rotate-45 blur-[52px] w-24 h-[440px] bg-linear-to-b from-[#FF974D99] from-80% to-[#FF974D00]}
-    .hero-section::before {@apply content-[''] hidden lg:block absolute -top-30 right-0 z-[-999] rotate-45 blur-[52px] w-24 h-[440px] bg-linear-to-b from-[#FF974D99] from-80% to-[#FF974D00]}
+    .hero-section::before {@apply content-[''] hidden lg:block absolute -top-30 right-0 z-[-999] rotate-45 blur-[52px] w-24 h-[440px] bg-linear-to-b from-[#FF974D99] from-80% to-[#FF974D00]} */
 
-    .primary-button { @apply py-5 px-6 sm:px-8 bg-linear-to-r from-primary to-[#FF004D] rounded-full text-white text-lg leading-none font-medium active:shadow-none transition-all shadow-gradientbtn duration-300 hover:to-primary hover:from-[#FF004D]}
-    .outline-button {@apply py-5 px-6 sm:px-8 shadow-outlinebtn bg-linear-to-r from-primary to-[#FF004D] bg-clip-text text-transparent hover:bg-clip-border hover:text-white border border-[#F19E18] hover:border-transparent rounded-full leading-none text-lg font-medium transition-all duration-300}
+    .primary-button { @apply py-5 px-6 sm:px-8 bg-primary rounded-full text-white text-lg leading-none font-medium active:shadow-none transition-all shadow-gradientbtn duration-300 hover:bg-primary/80 cursor-pointer}
+    .outline-button {@apply py-5 px-5 sm:px-8 shadow-outlinebtn text-primary hover:text-white border border-[#F19E18] hover:bg-primary hover:border-transparent rounded-full leading-none text-base sm:text-lg font-medium transition-all duration-300 cursor-pointer}
 
     .ecosystem-layout {@apply flex flex-wrap gap-6}
 
     .hero-heading {@apply text-[32px] sm:text-[40px] lg:text-[54px] font-normal mb-6 md:mb-8 leading-[38px] sm:leading-[46px] lg:leading-[60px] text-center lg:text-left}
-    .hero-description {@apply text-sm sm:text-base lg:text-lg font-normal mb-8 lg:mb-12 text-center lg:text-left leading-tight}
+    .hero-description {@apply text-lg font-normal mb-8 lg:mb-12 text-center lg:text-left leading-tight}
     .section-heading {@apply text-[32px] sm:text-[48px] font-semibold mb-6 leading-tight}
     .section-description {@apply mx-auto text-center text-lg font-normal text-paragraph leading-tight}
     .card {@apply rounded-2xl border border-[#EFF0F6] p-8 bg-white relative z-10}
     .transparent-title {@apply inline-flex lg:self-start mx-auto lg:mx-0 bg-white/10 border border-white/15 backdrop-blur-md rounded-full px-4 py-2 font-medium text-sm text-white}
 
-    .cta-section {@apply relative rounded-[32px] overflow-hidden bg-linear-to-br from-[#FFFFFF] to-[#FFF5F1] border border-[#FFE9E1] p-10 md:p-16}
-    .cta-glow-1 {@apply absolute -top-32 -left-32 w-[280px] h-[280px] rounded-full bg-[#f36805] opacity-25 blur-[120px] pointer-events-none}
+    .cta-section {@apply relative rounded-[32px] overflow-hidden bg-[#FFF7F4] border border-[#FFE9E1] p-8 md:p-16}
+    /* .cta-glow-1 {@apply absolute -top-32 -left-32 w-[280px] h-[280px] rounded-full bg-[#f36805] opacity-25 blur-[120px] pointer-events-none}
     .cta-glow-2 {@apply absolute -bottom-32 -right-32 w-[280px] h-[280px] rounded-full bg-[#f19e18] opacity-20 blur-[120px] pointer-events-none}
-    .center-glow {@apply max-w-[278px] w-full aspect-square rounded-full bg-[#FFC9A3] absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 blur-[200px]}
+    .center-glow {@apply max-w-[278px] w-full aspect-square rounded-full bg-[#FFC9A3] absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 blur-[200px]} */
 
-    .faq-item {@apply p-6 text-left w-full cursor-pointer bg-white border border-[#EFF0F6] rounded-2xl shadow-card transition-all duration-300}
+    .faq-item {@apply p-6 text-left w-full cursor-pointer bg-white border border-[#EFF0F6] rounded-2xl transition-all duration-300}
     .faq-text {@apply h-0 origin-top overflow-hidden transition-all duration-300 ease-in-out}
     .icon-div {@apply w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center shrink-0}
     .transparent-card {@apply rounded-[16px] bg-white/5 border border-white/10 backdrop-blur-md p-4 flex flex-col gap-3}
 
-    .outline-hover-btn {@apply text-base font-medium w-full p-3 rounded-full border border-[#EFF0F6] group-hover:bg-linear-to-r group-hover:from-primary group-hover:border-none group-hover:to-[#FF004D] group-hover:text-white transition-all duration-200 group-hover:shadow-gradientbtn}
+    .outline-hover-btn {@apply text-base font-medium w-full p-3 rounded-full border border-[#EFF0F6] group-hover:border-transparent group-hover:bg-primary group-hover:text-white transition-all duration-200 group-hover:shadow-gradientbtn cursor-pointer}
 }
 
 @layer utilities{
@@ -69,3 +69,63 @@
     .drawer-header { @apply flex justify-between gap-5 p-4 border-b border-slate-200 }
     .drawer-title { @apply capitalize text-lg font-medium }
     .drawer-body { @apply px-5 py-8 }
+
+
+    .db-field-title { @apply text-sm font-medium block mb-2 }
+    .db-field-title.required { @apply after:content-['*'] ltr:after:ml-1 rtl:after:mr-1 after:text-red-500 }
+    .db-field-control { @apply outline-none block w-full h-12 px-3 pb-[2px] rounded-lg border transition bg-white border-[#EFF0F6] focus-within:border-primary/20 }
+    .db-multiple-field { @apply flex items-center w-full h-10 rounded-md border transition bg-white border-gray-200 focus-within:border-primary/20 }
+    .db-multiple-field input { @apply w-1/2 h-full px-3 pb-[2px] ltr:border-l rtl:border-r first:border-none border-gray-200 transition }
+    .db-multiple-field button { @apply rounded-md h-8 ltr:mr-[3px] rtl:ml-[3px] px-4 text-base transition bg-primary/10 text-primary hover:bg-primary hover:text-white }
+    .db-field-alert { @apply ml-1 text-red-500 }
+    .db-field-down-arrow { @apply relative after:content-['\f107'] after:font-bold after:text-xs after:absolute after:top-1/2 after:-translate-y-1/2 ltr:after:right-3 rtl:after:left-3 }
+    .db-field-radio-group { @apply flex items-center gap-5 pt-2 }
+    .db-field-radio { @apply flex items-center pt-1 w-fit cursor-pointer }
+    .db-field-checkbox { @apply flex items-center pt-1 w-fit cursor-pointer }
+    .db-field-label { @apply text-[15px] ltr:pl-2 rtl:pr-2 leading-4 capitalize cursor-pointer }
+    textarea.db-field-control { @apply h-36 py-3 }
+    .db-field-control[type=file] { @apply relative ltr:pl-0 rtl:pr-0 transition before:transition before:content-[''] before:absolute before:top-0 ltr:before:left-[107px] rtl:before:right-[113px] before:z-10 before:w-[1px] before:h-full before:bg-gray-200 focus-within:before:bg-primary/20 }
+    .db-field-control[type=file]::-webkit-file-upload-button,
+    .db-field-control[type=file]::file-selector-button { @apply h-10 pl-4 pb-1 pr-7 rounded-l-lg text-sm text-paragraph cursor-pointer transition bg-white border-none }
+    .checkbox:checked { @apply border-none }
+    .checkbox:checked + .check-icon { @apply flex }
+    .checkbox:checked + .checkmark { @apply bg-primary border-primary }
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  overflow: hidden;
+  width: fit-content !important;
+
+  img {
+    border-radius: 8px;
+    width: 100%;
+    height: 267px;
+    object-fit: cover;
+  }
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear !important;
+    margin: 0 auto;
+  }
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #fffcfc80; /* Your desired color */
+  border-radius: 0.375rem;   
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #ff1d07;
+
+}
+

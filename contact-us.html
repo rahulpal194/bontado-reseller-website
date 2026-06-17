@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/fonts/typography/zalando/zalando.css">
+    <link rel="stylesheet" href="/lib/swiper/bundle.min.css">
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/dropdown.js"></script>
+    <script defer src="/js/drawer.js"></script>
+    <script defer src="/lib/swiper/bundle.min.js"></script>
+    <script defer src="/lib/swiper/initialize.js"></script>
+    <title>Contact Us</title>
+</head>
+<body>
+
+    <header class="w-full top-4 db-header">
+        <div class="container">
+            <nav class="flex justify-between items-center container z-30 p-3! transition-all duration-200">
+            <a href="#" class="lg:ml-3">
+                <img src="/images/logo.png">
+            </a>
+            <ul class="text-base font-medium hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="flex items-center gap-3">
+                <div class="relative dropdown-group w-fit hidden lg:flex">
+                    <button class="flex items-center justify-center gap-1.5 w-fit rounded-3xl capitalize text-sm font-medium h-10 lg:h-12 px-4 lg:px-6 border transition text-heading bg-white border-[#EFF0F6] dropdown-btn">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                        <span class="whitespace-nowrap hidden lg:block">english</span>
+                    </button>
+                    <ul class="p-2 min-w-[180px] rounded-lg shadow-xl absolute top-14 right-0 z-10 border border-gray-200 bg-white dropdown-list">
+                        <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">english</span>
+                        </li>
+                        <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">arabic</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="primary-button h-10 lg:h-12 px-6! hidden lg:flex items-center">Login</button>
+                <button id="mobile-menu-btn" data-drawer="#mobile-menu" class="lg:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 rounded-lg cursor-pointer" aria-label="Toggle menu">
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                </button>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="drawer">
+        <div class="drawer-content">
+            <div class="flex justify-between items-center mb-8">
+                <a href="#">
+                    <img src="/images/logo.png" class="h-8">
+                </a>
+                <button class="drawer-close w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer" aria-label="Close menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-2 mb-6">
+                <li><a href="/index.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Home</a></li>
+                <li><a href="/restaurant.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Restaurant</a></li>
+                <li><a href="/partner.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Partner</a></li>
+                <li><a href="/about-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">About Us</a></li>
+                <li><a href="/contact-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Contact Us</a></li>
+            </ul>
+            <div class="relative dropdown-group w-full lg:hidden mb-6">
+                <button class="flex items-center justify-center gap-1.5 w-full rounded-3xl capitalize text-sm font-medium h-10 lg:h-12 px-4 lg:px-6 border transition text-heading bg-white border-[#EFF0F6] dropdown-btn">
+                    <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                    <span class="whitespace-nowrap">english</span>
+                </button>
+                <ul class="p-2 min-w-[180px] w-full rounded-lg shadow-xl absolute top-14 right-0 z-10 border border-gray-200 bg-white dropdown-list">
+                    <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">english</span>
+                    </li>
+                    <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">arabic</span>
+                    </li>
+                </ul>
+            </div>
+            <button class="primary-button h-10 lg:h-12 px-6! lg:hidden flex items-center w-full justify-center">Login</button>
+        </div>
+    </div>
+
+    <!--========================
+          HERO PART START
+    ==========================-->
+    <section class="pb-12 sm:pb-24 pt-40">
+        <div class="container">
+            <span class="section-title self-center bg-[#FFF5F1] text-primary border-primary/10">Contact Us</span>
+            <div class="max-w-[635px] mx-auto mb-16">
+                <h1 class="hero-heading text-center! font-semibold!">Send us a message or give us a call</h1>
+                <p class="hero-description text-center!">Whether you're looking to launch your restaurant ordering platform, become a partner, or simply have a question, we're here to help.</p>
+            </div>
+
+            <div class="flex md:flex-row flex-col gap-x-24 gap-y-12">
+                <div class="flex flex-col gap-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0"></div>
+                            <h6 class="text-[22px] font-medium">Talk with Sales</h6>
+                        </div>
+                        <p class="text-lg">Phone: <span class="text-[#4187FF]">+5632569874</span></p>
+                        <p class="text-lg">Email: <span class="text-[#4187FF]">sales@bontado.com</span></p>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0"></div>
+                            <h6 class="text-[22px] font-medium">Chat with Support</h6>
+                        </div>
+                        <p class="text-lg">Phone: <span class="text-[#4187FF]">+5632569874</span></p>
+                        <p class="text-lg">Email: <span class="text-[#4187FF]">sales@bontado.com</span></p>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0"></div>
+                            <h6 class="text-[22px] font-medium">Address</h6>
+                        </div>
+                        <p class="text-lg">Bontado Ltd.</p>
+                        <p class="text-lg">61476 Kronberg im Taunus, Germany</p>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 rounded-3xl bg-[#FCFCFC] border border-[#EFF0F6] flex-auto">
+                    <form>
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="" class="db-field-title">Full Name</label>
+                                <input type="text" class="db-field-control">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="" class="db-field-title">Company Name</label>
+                                <input type="text" class="db-field-control">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="" class="db-field-title">Email</label>
+                                <input type="text" class="db-field-control">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="" class="db-field-title">Phone Number</label>
+                                <input type="text" class="db-field-control">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="" class="db-field-title">Subject</label>
+                                <input type="text" class="db-field-control">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="" class="db-field-title">Message</label>
+                                <textarea name="w3review" rows="4" class="db-field-control h-24!"></textarea>
+                            </div>
+                        </div>
+                       <button class="primary-button block ml-auto">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+           HERO PART END
+    ==========================-->
+
+
+    <!--========================
+           FAQ PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <span class="section-title">FAQ</span>
+        <div class="container">
+            <div class="max-w-[790px] mx-auto mb-12">
+                <h1 class="section-heading text-center mb-6!">Before you contact us</h1>
+                <p class="max-w-[635px] section-description">Quick answers to the questions we hear most — you might find what you need right here.</p>
+            </div>
+            <div class="flex flex-col gap-3">
+                <div class="faq-item">
+                    <div class="flex items-center gap-3 justify-between group-hover:text-primary">
+                        <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
+                        <div class="icon-div">
+                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                        </div>
+                    </div>
+                    <div class="faq-text">
+                        <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="flex items-center gap-3 justify-between group-hover:text-primary">
+                        <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
+                        <div class="icon-div">
+                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                        </div>
+                    </div>
+                    <div class="faq-text">
+                        <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="flex items-center gap-3 justify-between group-hover:text-primary">
+                        <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
+                        <div class="icon-div">
+                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                        </div>
+                    </div>
+                    <div class="faq-text">
+                        <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!--========================
+           FAQ PART END
+    ==========================-->
+
+    
+    <!--========================
+           CTA PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <div class="container">
+            <div class="cta-section">
+                <div class="max-w-[720px] mx-auto">
+                    <h2 class="hero-heading font-semibold text-center">Join the movement toward restaurant ownership</h2>
+                    <p class="section-description text-center">Whether you're a restaurant looking for independence or an agency building recurring revenue, Bontado gives you the platform to grow on your terms.</p>
+                    <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-3 gap-x-6 mt-8">
+                        <button class="primary-button w-full sm:w-auto">I run a restaurant</button>
+                        <button class="outline-button w-full sm:w-auto">I am an agency or reseller</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+           CTA PART END
+    ==========================-->
+
+
+    <!--========================
+         FOOTER PART START
+    ==========================-->
+    <footer class="container pt-12 sm:pt-24">
+        <nav class="flex justify-between flex-col gap-3 flex-wrap sm:flex-row items-center z-30 transition-all duration-200">
+            <a href="#">
+                <img src="/images/logo.png">
+            </a>
+            <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
+                <li><a href="">Home</a></li>
+                <li><a href="">Restaurant</a></li>
+                <li><a href="">Partner</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <div class="flex gap-2">
+                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+            </div>
+        </nav>
+        <div class="border-t border-[#EFF0F6] py-7 mt-8">
+            <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
+                <span class="text-base">© All rights reserved. Bontado.</span>
+                <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="#" class="back-to-top">Back to top</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <!--========================
+          FOOTER PART END
+    ==========================-->
+</body>
+</html>

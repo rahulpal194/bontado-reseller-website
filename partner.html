@@ -15,21 +15,21 @@
     <header class="w-full top-4 db-header">
         <div class="container">
             <nav class="flex justify-between items-center container z-30 p-3! transition-all duration-200">
-            <a href="#" class="ml-3">
+            <a href="#" class="lg:ml-3">
                 <img src="/images/logo.png">
             </a>
             <ul class="text-base font-medium hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/restaurant.html">Restaurant</a></li>
                 <li><a href="/partner.html">Partner</a></li>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
             </ul>
             <div class="flex items-center gap-3">
-                <div class="relative dropdown-group w-fit">
+                <div class="relative dropdown-group w-fit hidden lg:flex">
                     <button class="flex items-center justify-center gap-1.5 w-fit rounded-3xl capitalize text-sm font-medium h-10 lg:h-12 px-4 lg:px-6 border transition text-heading bg-white border-[#EFF0F6] dropdown-btn">
-                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full hidden lg:block">
-                        <span class="whitespace-nowrap">english</span>
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                        <span class="whitespace-nowrap hidden lg:block">english</span>
                     </button>
                     <ul class="p-2 min-w-[180px] rounded-lg shadow-xl absolute top-14 right-0 z-10 border border-gray-200 bg-white dropdown-list">
                         <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
@@ -42,7 +42,7 @@
                         </li>
                     </ul>
                 </div>
-                <button class="primary-button h-10 lg:h-12 px-6! flex items-center">Login</button>
+                <button class="primary-button h-10 lg:h-12 px-6! hidden lg:flex items-center">Login</button>
                 <button id="mobile-menu-btn" data-drawer="#mobile-menu" class="lg:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 rounded-lg cursor-pointer" aria-label="Toggle menu">
                     <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
                     <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
@@ -63,13 +63,30 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
             </div>
-            <ul class="flex flex-col gap-2">
+            <ul class="flex flex-col gap-2 mb-6">
                 <li><a href="/index.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Home</a></li>
                 <li><a href="/restaurant.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Restaurant</a></li>
                 <li><a href="/partner.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Partner</a></li>
-                <li><a href="" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">About Us</a></li>
-                <li><a href="" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Contact Us</a></li>
+                <li><a href="/about-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">About Us</a></li>
+                <li><a href="/contact-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Contact Us</a></li>
             </ul>
+            <div class="relative dropdown-group w-full lg:hidden mb-6">
+                <button class="flex items-center justify-center gap-1.5 w-full rounded-3xl capitalize text-sm font-medium h-10 lg:h-12 px-4 lg:px-6 border transition text-heading bg-white border-[#EFF0F6] dropdown-btn">
+                    <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                    <span class="whitespace-nowrap">english</span>
+                </button>
+                <ul class="p-2 min-w-[180px] w-full rounded-lg shadow-xl absolute top-14 right-0 z-10 border border-gray-200 bg-white dropdown-list">
+                    <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">english</span>
+                    </li>
+                    <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">arabic</span>
+                    </li>
+                </ul>
+            </div>
+            <button class="primary-button h-10 lg:h-12 px-6! lg:hidden flex items-center w-full justify-center">Login</button>
         </div>
     </div>
 
@@ -77,11 +94,10 @@
           HERO PART START
     ==========================-->
     <section class="hero-section pb-12 sm:pb-24 pt-40">
-        <span class="center-glow"></span>
         <div class="container">
             <div class="flex flex-col lg:flex-row justify-between items-center gap-12">
                 <div class="basis-2/3 flex flex-col lg:justify-start justify-center">
-                    <span class="section-title mx-0! self-center lg:self-start">Bontado Partner Program</span>
+                    <span class="section-title self-center bg-[#FFF5F1] text-primary border-primary/10 mx-0! lg:self-start">Bontado Partner Program</span>
                     <h1 class="hero-heading"><span class="font-semibold">Build a recurring revenue machine — </span> on a platform that's yours.</h1>
                     <p class="hero-description ">Sign a restaurant once and earn every month after. Bontado is the white-label ordering platform behind your agency — fully branded to you, with an optional marketplace that turns every client into two income streams instead of one.</p>
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-y-3 gap-x-6">
@@ -99,15 +115,12 @@
            HERO PART END
     ==========================-->
 
-
     <!--========================
          MIGRATION TEAM PART
     ==========================-->
     <section class="relative py-12 sm:py-24">
         <div class="container">
-            <div class="relative rounded-[28px] overflow-hidden bg-heading p-10 md:p-16">
-                <div class="cta-glow-1 w-[480px] h-[480px]"></div>
-                <div class="cta-glow-2 w-[480px] h-[480px]"></div>
+            <div class="relative rounded-[28px] overflow-hidden bg-[#2C0C00] p-8 md:p-16">
                 <div class="flex gap-x-16 gap-y-12 lg:flex-row flex-col items-center relative z-10">
                     <div class="flex flex-col items-start max-w-[625px]">
                         <h2 class="section-heading text-white mb-4! text-center lg:text-left">GloriaFood retires April 30, 2027. Move your clients to a platform you control.</h2>
@@ -143,104 +156,125 @@
          MIGRATION TEAM PART
     ==========================-->
 
-
-    <section class="relative py-24">
+    <!--==========================
+        REVENUE MODEL PART START
+    ============================-->
+    <section class="relative py-12 sm:py-24">
         <span class="section-title">The Revenue Machine</span>
         <div class="container">
-            <span class="max-w-[278px] w-full aspect-square rounded-full bg-[#FFC9A3] absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 blur-[300px]"></span>
             <div class="max-w-[635px] mx-auto mb-12">
                  <h1 class="section-heading text-center">A revenue machine, not a referral fee</h1>
                  <p class="section-description">Every restaurant you sign becomes a recurring node that pays you month after month. And unlike a pure white-label tool, each one earns on two streams at once.</p>
             </div>
             <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[1198px] mx-auto">
-                <div class="border-[#FFE9E1] card rounded-[20px]! shadow-card relative overflow-hidden bg-linear-to-r from-[#FFF5F1] to-white">
-                    <div class="absolute -top-20 -right-20 w-[280px] h-[280px] rounded-full bg-[#ffd9b8] opacity-40 blur-3xl pointer-events-none"></div>
-                    <div class="flex items-center justify-between mb-2">
-                      <span class="text-[#6e7191] font-ui font-medium text-[13px]">The old way</span>
-                      <span class="text-[#6e7191] font-ui font-medium text-[13px]">30% bite</span>
+                <div class="card rounded-[20px]!">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="w-14 h-14 rounded-xl bg-[#FFE9E1]"></span>
+                        <span class="text-primary font-medium text-sm">Stream 1</span>
                     </div>
-                    <h3 class="text-heading font-semibold text-[28px]">
-                      Traditional Aggregators
-                    </h3>
+                    <h3 class="text-heading font-semibold text-[26px]"> Subscription margin</h3>
                     <p class="text-base text-paragraph">Buy wholesale, set your own retail, keep the spread every month.</p>
                 </div>
-                <div class="border-[#FFE9E1] card rounded-[20px]! shadow-card relative overflow-hidden bg-linear-to-r from-[#FFF5F1] to-white">
-                    <div class="absolute -top-20 -right-20 w-[280px] h-[280px] rounded-full bg-[#ffd9b8] opacity-40 blur-3xl pointer-events-none"></div>
-                    <div class="flex items-center justify-between mb-2">
-                      <span class="text-[#6e7191] font-ui font-medium text-[13px]">The old way</span>
-                      <span class="text-[#6e7191] font-ui font-medium text-[13px]">30% bite</span>
+                <div class="card rounded-[20px]!">
+                    <div class="flex items-center justify-between mb-5">
+                        <span class="w-14 h-14 rounded-xl bg-[#FFE9E1]"></span>
+                        <span class="text-primary font-medium text-sm">Stream 2</span>
                     </div>
-                    <h3 class="text-heading font-semibold text-[28px]">
-                      Traditional Aggregators
-                    </h3>
-                    <p class="text-base text-paragraph">Buy wholesale, set your own retail, keep the spread every month.</p>
+                    <h3 class="text-heading font-semibold text-[26px]"> Marketplace share</h3>
+                    <p class="text-base text-paragraph">When your restaurants switch on the marketplace, you earn on the extra orders too.</p>
                 </div>
             </div>
 
-            <div class="bg-heading p-8 rounded-[20px] mt-8 flex items-center gap-5 mb-12">
-                <div class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center">
-                    
-                </div>
-                <h6 class="text-[22px] font-medium text-white">Sign once, earn monthly. Every new client stacks on top of the last — the machine only grows.</h6>
+            <div class="bg-[#FCFCFC] border border-[#EFF0F6] px-8 py-6 rounded-[20px] my-8 flex items-center gap-5">
+                <div class="w-11 h-11 rounded-xl bg-[#EFF0F6] flex items-center justify-center shrink-0"></div>
+                <h6 class="text-[22px] font-medium">Sign once, earn monthly. Every new client stacks on top of the last — the machine only grows.</h6>
             </div>
-            <div class="flex flex-col lg:flex-row justify-between items-center gap-10 pt-12">
-                <div class="flex-1">
-                    <span class="section-title inline-flex lg:self-start self-center">How It Works</span>
-                    <h1 class="section-heading mb-6!">Everything you need to run your own platform</h1>
-                    <p class="section-description lg:text-left text-center">Switch the marketplace on for more discovery, off whenever you like. Fair flat terms — not a 30% commission trap. Your customers and their data stay with you, not the platform.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-                        <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
-                            <span class="text-base font-medium">Multi-tenant admin</span>
+            <div class="rounded-3xl overflow-hidden bg-[#FFF9F6] border border-[#FFE9E1] p-8">
+                <div class="flex gap-x-14 gap-y-12 lg:flex-row flex-col items-center">
+                    <div class="flex flex-col items-start w-full gap-6">
+                        <div>
+                            <span class="text-sm text-primary">Interactive projection</span>
+                            <h6 class="text-[26px] font-semibold">Model your recurring revenue</h6>
                         </div>
-                        <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
-                            <span class="text-base font-medium">Multi-tenant admin</span>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between mb-1">
+                                <label for="" class="text-base font-medium">Restaurants you sign</label>
+                                <span class="text-primary font-semibold text-base">29 clients</span>
+                            </div>
+                            <input id="range" type="range" class="block w-full mt-2  rounded-md focus:border-primary focus:outline-none accent-[#ff2c2c]">
                         </div>
-                        <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
-                            <span class="text-base font-medium">Multi-tenant admin</span>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between mb-1">
+                                <label for="" class="text-base font-medium">Subscription margin per client</label>
+                                <span class="text-primary font-semibold text-base">€80 / mo</span>
+                            </div>
+                            <input id="range" type="range" class="block w-full mt-2  rounded-md focus:border-primary focus:outline-none accent-[#ff2c2c]">
                         </div>
-                        <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
-                            <span class="text-base font-medium">Multi-tenant admin</span>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between mb-1">
+                                <label for="" class="text-base font-medium">Share running the marketplace</label>
+                                <span class="text-primary font-semibold text-base">40%</span>
+                            </div>
+                            <input id="range" type="range" class="block w-full mt-2  rounded-md focus:border-primary focus:outline-none accent-[#ff2c2c]">
                         </div>
-                        <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
-                            <span class="text-base font-medium">Multi-tenant admin</span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
-                            <span class="text-base font-medium">Multi-tenant admin</span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
-                            <span class="text-base font-medium">Multi-tenant admin</span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
-                            <span class="text-base font-medium">Multi-tenant admin</span>
+                        <div class="w-full">
+                            <div class="flex items-center justify-between mb-1">
+                                <label for="" class="text-base font-medium">Marketplace share per active client</label>
+                                <span class="text-primary font-semibold text-base">€60 / mo</span>
+                            </div>
+                            <input id="range" type="range" class="block w-full mt-2  rounded-md focus:border-primary focus:outline-none accent-[#ff2c2c]">
                         </div>
                     </div>
-                </div>
-                <div class="flex justify-end">
-                    <img class="w-auto h-auto" src="/images/proof.png" alt="">
+                    <div class="w-full max-w-[440px]">
+                        <div class="rounded-2xl bg-[#2C0C00] border border-white/10 backdrop-blur-md p-6 flex flex-col gap-3">
+                            <div class="flex flex-col gap-3">
+                                <span class="text-xs text-white/80">Monthly revenue</span>
+                                <h6 class="text-[36px] font-semibold text-white leading-tight">€3,040</h6>
+                            </div>
+                            <div class="flex flex-col items-center gap-3">
+                                <div class="bg-white/5 rounded-[10px] py-3 px-4 flex items-center justify-between w-full">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+                                        <p class="text-sm font-medium text-white/80">Subscription margin</p>
+                                    </div>
+                                    <span class="text-sm font-semibold text-white/80">€2,320</span>
+                                </div>
+                                <span class="text-primary">+</span>
+                                <div class="bg-white/5 rounded-[10px] py-3 px-4 flex items-center justify-between w-full">
+                                    <div class="flex items-center gap-2">
+                                        <span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+                                        <p class="text-sm font-medium text-white/80">Vendor dependency</p>
+                                    </div>
+                                    <span class="text-sm font-semibold text-white/80">€720</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col border-t border-white/10 pt-3">
+                                <span class="text-xs text-white/80 mb-2">Projected annual revenue</span>
+                                <h6 class="text-[26px] font-semibold text-primary leading-tight">€36,480</h6>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <!--==========================
+        REVENUE MODEL PART END
+    ============================-->
 
 
-
-    <section class="relative py-24">
+    <!--==========================
+        PARTNERSHIP MODEL PART START
+    ============================-->
+    <section class="relative py-12 sm:py-24">
         <span class="section-title">Partnership Model</span>
         <div class="container">
             <div class="max-w-[790px] mx-auto mb-12">
                  <h1 class="section-heading text-center">Choose how you want to grow</h1>
                  <p class="max-w-[635px] section-description">Whether you want to keep it light or run the whole platform yourself, there's a model that fits your business — and every one of them pays you back month after month.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card shadow-card relative z-10 p-6!">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-8">
+                <div class="card p-6!">
                     <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <div class="mb-6">
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Refer</h6>
@@ -251,7 +285,7 @@
                         <p class="text-sm text-paragraph leading-tight">Partners who don't want to handle billing or support.</p>
                     </div>
                 </div>
-                <div class="card shadow-card relative z-10 p-6!">
+                <div class="card p-6!">
                     <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <div class="mb-6">
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Resell</h6>
@@ -262,7 +296,7 @@
                         <p class="text-sm text-paragraph leading-tight">Partners who want margin and direct ownership.</p>
                     </div>
                 </div>
-                <div class="card shadow-card relative z-10 p-6!">
+                <div class="card p-6!">
                     <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <div class="mb-6">
                         <h6 class="text-[22px] font-semibold leading-none mb-2">White-label</h6>
@@ -276,9 +310,14 @@
             </div>
         </div>
     </section>
+    <!--==========================
+        PARTNERSHIP MODEL PART END
+    ============================-->
 
-
-    <section class="relative py-24 bg-linear-to-b from-white to-[#FFF7F0]">
+    <!--==============================
+       WHY CHOOSE BONTADO PART START
+    =================================-->
+    <section class="relative py-12 sm:py-24 bg-[#FFF9F6]">
         <span class="section-title">Why Choose Bontado?</span>
         <div class="container">
             <div class="max-w-[635px] mx-auto mb-12">
@@ -286,78 +325,140 @@
                  <p class="max-w-[635px] section-description">From your branded storefront to loyalty, payments, and a unified order dashboard — every tool your restaurant needs is included, with nothing extra to buy.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card relative z-10 p-6! border-[#FFE9E1] bg-linear-to-l from-[#FFF5F1] to-white">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Two revenue streams</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Send us clients, earn recurring commission.</p>
                 </div>
-                <div class="card relative z-10 p-6! border-[#FFE9E1] bg-linear-to-l from-[#FFF5F1] to-white">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">You own the price</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Buy wholesale, set your price, you invoice and support.</p>
                 </div>
-                <div class="card relative z-10 p-6! border-[#FFE9E1] bg-linear-to-l from-[#FFF5F1] to-white">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">One platform, every module</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Our brand end to end; clients never see Bontado.</p>
                 </div>
-                <div class="card relative z-10 p-6! border-[#FFE9E1] bg-linear-to-l from-[#FFF5F1] to-white">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Multi-tenant from day one</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Manage every client from one dashboard.</p>
                 </div>
-                <div class="card relative z-10 p-6! border-[#FFE9E1] bg-linear-to-l from-[#FFF5F1] to-white">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Recurring and compounding</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Build your client base once and earn monthly.</p>
                 </div>
-                <div class="card relative z-10 p-6! border-[#FFE9E1] bg-linear-to-l from-[#FFF5F1] to-white">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Real enablement</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Onboarding, sales materials, and partner support.</p>
                 </div>
             </div>
         </div>
     </section>
+    <!--==============================
+        WHY CHOOSE BONTADO PART END
+    =================================-->
 
+    <!--==============================
+        PROOF PART START
+    =================================-->
+    <section class="py-12 sm:py-24">
+        <div class="container">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-10 pt-12">
+                <div class="flex-1 flex flex-col">
+                    <span class="section-title self-center mx-0! lg:self-start">White-label Proof</span>
+                    <h1 class="section-heading mb-6! lg:text-left text-center">Everything you need to run your own platform</h1>
+                    <p class="section-description lg:text-left text-center">Switch the marketplace on for more discovery, off whenever you like. Fair flat terms — not a 30% commission trap. Your customers and their data stay with you, not the platform.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                        <div class="flex gap-3 items-center">
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <span class="text-base font-medium">Multi-tenant admin</span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <span class="text-base font-medium">One login for all restaurants</span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <span class="text-base font-medium">Wholesale pricing</span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <span class="text-base font-medium">Set your own retail pricing</span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <span class="text-base font-medium">Branded billing</span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <span class="text-base font-medium">Custom domains</span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <span class="text-base font-medium">No Bontado branding on checkout</span>
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <span class="text-base font-medium">Marketplace control per restaurant</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <img class="w-auto h-auto" src="/images/proof.png" alt="">
+                </div>
+            </div>
+        </div>    
+    </section>
+    <!--==============================
+        PROOF PART END
+    =================================-->
 
-    <section class="relative py-24">
+    <!--==============================
+        WHO IT'S FOR PART START
+    =================================-->
+    <section class="relative py-12 sm:py-24">
         <span class="section-title">Who It’s For</span>
         <div class="container">
             <div class="max-w-[790px] mx-auto mb-12">
                  <h1 class="section-heading text-center">Who is the Bontado partner program for?</h1>
-                 <p class="max-w-[635px] section-description">Choose the plan that fits your restaurant. No commission on direct orders, no hidden fees.</p>
+                 <p class="max-w-[635px] section-description">Anyone who works with restaurants or has contact with restaurateurs can become our partner!</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-                <div class="card rounded-[20px]! shadow-card relative z-10 group p-6!">
-                    <img class="mb-4" src="/images/partner-1.png" alt="card-img">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="card rounded-[20px]! p-6!">
+                    <img class="mb-4 w-full" src="/images/partner-1.png" alt="card-img">
                     <h3 class="text-lg font-semibold leading-tight mb-2">Restaurant Tech & POS Resellers</h3>
                     <p class="text-sm text-paragraph line-clamp-2">Add a recurring ordering layer to your hardware and POS deals.</p>
                 </div>
-                <div class="card rounded-[20px]! shadow-card relative z-10 group p-6!">
-                    <img class="mb-4" src="/images/partner-2.png" alt="card-img">
+                <div class="card rounded-[20px]! p-6!">
+                    <img class="mb-4 w-full" src="/images/partner-2.png" alt="card-img">
                     <h3 class="text-lg font-semibold leading-tight mb-2">Web Development Agencies</h3>
                     <p class="text-sm text-paragraph line-clamp-2">Turn one-off restaurant builds into monthly platform revenue.</p>
                 </div>
-                <div class="card rounded-[20px]! shadow-card relative z-10 group p-6!">
-                    <img class="mb-4" src="/images/partner-3.png" alt="card-img">
+                <div class="card rounded-[20px]! p-6!">
+                    <img class="mb-4 w-full" src="/images/partner-3.png" alt="card-img">
                     <h3 class="text-lg font-semibold leading-tight mb-2">Marketing Agencies</h3>
                     <p class="text-sm text-paragraph line-clamp-2">Own the ordering channel behind every campaign you run.</p>
                 </div>
-                <div class="card rounded-[20px]! shadow-card relative z-10 group p-6!">
-                    <img class="mb-4" src="/images/partner-4.png" alt="card-img">
+                <div class="card rounded-[20px]! p-6!">
+                    <img class="mb-4 w-full" src="/images/partner-4.png" alt="card-img">
                     <h3 class="text-lg font-semibold leading-tight mb-2">Restaurant Consultants</h3>
                     <p class="text-sm text-paragraph line-clamp-2">Bring clients a platform they own - and keep earning alongside them.</p>
                 </div>
             </div>
         </div>
     </section>
-
+    <!--========================
+        WHO IT'S FOR PART END
+    =================================-->
 
     <!--========================
            FAQ PART START
     ==========================-->
-    <section class="relative py-24">
+    <section class="relative py-12 sm:py-24">
         <span class="section-title">FAQ</span>
         <div class="container">
             <div class="max-w-[790px] mx-auto mb-12">
@@ -365,30 +466,36 @@
                 <p class="max-w-[635px] section-description">Everything restaurants and agencies ask before getting started. Still curious? Talk to our team.</p>
             </div>
             <div class="flex flex-col gap-3">
-                <div class="group p-6 text-left w-full cursor-pointer bg-white border border-[#EFF0F6] rounded-2xl shadow-card faq-item transition-all duration-300">
+                <div class="faq-item">
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
-                        <i class="icon-circle-down text-xl gradient-text rotate-0 transition-all duration-300 w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center">+</i>
+                        <div class="icon-div">
+                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                        </div>
                     </div>
-                    <div class="h-0 origin-top faq-text overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="faq-text">
                         <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
                     </div>
                 </div>
-                <div class="group p-6 text-left w-full cursor-pointer bg-white border border-[#EFF0F6] rounded-2xl shadow-card faq-item transition-all duration-300">
+                <div class="faq-item">
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
-                        <i class="icon-circle-down text-xl gradient-text rotate-0 transition-all duration-300 w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center">+</i>
+                        <div class="icon-div">
+                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                        </div>
                     </div>
-                    <div class="h-0 origin-top faq-text overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="faq-text">
                         <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
                     </div>
                 </div>
-                <div class="group p-6 text-left w-full cursor-pointer bg-white border border-[#EFF0F6] rounded-2xl shadow-card faq-item transition-all duration-300">
+                <div class="faq-item">
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
-                        <i class="icon-circle-down text-xl gradient-text rotate-0 transition-all duration-300 w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center">+</i>
+                        <div class="icon-div">
+                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                        </div>
                     </div>
-                    <div class="h-0 origin-top faq-text overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="faq-text">
                         <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
                     </div>
                 </div>
@@ -403,15 +510,12 @@
     <!--========================
            CTA PART START
     ==========================-->
-    <section class="relative py-24">
+    <section class="relative py-12 sm:py-24">
         <div class="container">
-            <div class="relative rounded-[32px] overflow-hidden bg-linear-to-br from-[#FFFFFF] to-[#FFF5F1] border border-[#FFE9E1] p-10 md:p-16">
-                <div class="absolute -top-32 -left-32 w-[280px] h-[280px] rounded-full bg-[#f36805] opacity-25 blur-[120px] pointer-events-none"></div>
-                <div class="absolute -bottom-32 -right-32 w-[280px] h-[280px] rounded-full bg-[#f19e18] opacity-20 blur-[120px] pointer-events-none"></div>
+            <div class="cta-section">
                 <div class="max-w-[790px] mx-auto">
                     <h2 class="hero-heading font-semibold text-center">Start building your revenue machine</h2>
                     <p class="section-description text-center">Launch your own restaurant platform business, generate recurring revenue, and create long-term client value under your own brand.</p>
-                    
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-3 gap-x-6 mt-8">
                         <button class="primary-button w-full sm:w-auto">Apply to the Partner Program</button>
                     </div>
@@ -427,12 +531,12 @@
     <!--========================
          FOOTER PART START
     ==========================-->
-    <footer class="container pt-24">
-        <nav class="flex justify-between items-center container z-30 transition-all duration-200">
+    <footer class="container pt-12 sm:pt-24">
+        <nav class="flex justify-between flex-col gap-3 flex-wrap sm:flex-row items-center z-30 transition-all duration-200">
             <a href="#">
                 <img src="/images/logo.png">
             </a>
-            <ul class="text-base hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
+            <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
                 <li><a href="">Home</a></li>
                 <li><a href="">Restaurant</a></li>
                 <li><a href="">Partner</a></li>
@@ -446,14 +550,14 @@
             </div>
         </nav>
         <div class="border-t border-[#EFF0F6] py-7 mt-8">
-            <nav class="flex justify-between items-center container z-30 transition-all duration-200">
+            <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
                 <span class="text-base">© All rights reserved. Bontado.</span>
-            <ul class="text-base hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Terms of use</a></li>
-                <li><a href="#" class="back-to-top">Back to top</a></li>
-            </ul>
-        </nav>
+                <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="#" class="back-to-top">Back to top</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
     <!--========================
