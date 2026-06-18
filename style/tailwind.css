@@ -17,7 +17,8 @@
 @layer base{
     html {@apply scroll-smooth sm:overflow-x-auto overflow-x-hidden}
     body {@apply font-client  text-heading scroll-smooth! sm:overflow-x-visible overflow-x-hidden}
-    .db-header.fixed nav { @apply bg-white shadow-header rounded-full backdrop-blur-[20px]}
+    i {@apply leading-none}
+    .db-header.sticky-header nav { @apply bg-white shadow-header rounded-full backdrop-blur-[20px]}
     .db-header { @apply fixed top-0 left-0 z-30 w-full transition-all duration-300 }
     .section-title { @apply text-sm font-medium border border-[#EFF0F6] bg-[#FCFCFC] rounded-full px-4 py-2 leading-tight mb-6 block mx-auto w-fit}
 
@@ -26,14 +27,14 @@
     .dropdown-list { @apply scale-y-0 opacity-0 transition-all duration-300 origin-top bg-white}
     .dropdown-list.active { @apply scale-y-100 opacity-100 }
 
-    .sticky-header { @apply backdrop-blur-[100px] shadow-header bg-linear-90 from-white/90 from-0% to-white/50}
+    /* .sticky-header { @apply backdrop-blur-[100px] shadow-header bg-linear-90 from-white/90 from-0% to-white/50} */
 
     /* .hero-section {@apply bg-linear-to-b from-[#FFF7F0] to-white/10 overflow-hidden relative}
     .hero-section::after {@apply content-[''] hidden lg:block absolute -top-30 left-0 z-[-999] -rotate-45 blur-[52px] w-24 h-[440px] bg-linear-to-b from-[#FF974D99] from-80% to-[#FF974D00]}
     .hero-section::before {@apply content-[''] hidden lg:block absolute -top-30 right-0 z-[-999] rotate-45 blur-[52px] w-24 h-[440px] bg-linear-to-b from-[#FF974D99] from-80% to-[#FF974D00]} */
 
-    .primary-button { @apply py-5 px-6 sm:px-8 bg-primary rounded-full text-white text-lg leading-none font-medium active:shadow-none transition-all shadow-gradientbtn duration-300 hover:bg-primary/80 cursor-pointer}
-    .outline-button {@apply py-5 px-5 sm:px-8 shadow-outlinebtn text-primary hover:text-white border border-[#F19E18] hover:bg-primary hover:border-transparent rounded-full leading-none text-base sm:text-lg font-medium transition-all duration-300 cursor-pointer}
+    .primary-button { @apply py-5 px-6 sm:px-8 bg-primary rounded-full text-white text-lg leading-none font-medium active:shadow-none transition-all shadow-gradientbtn duration-300 hover:bg-primary/80 cursor-pointer flex items-center justify-center gap-2}
+    .outline-button {@apply py-5 px-5 sm:px-8 shadow-outlinebtn text-primary hover:text-white border border-[#F19E18] hover:bg-primary hover:border-transparent rounded-full leading-none text-base sm:text-lg font-medium transition-all duration-300 cursor-pointer flex items-center justify-center gap-2}
 
     .ecosystem-layout {@apply flex flex-wrap gap-6}
 
@@ -51,7 +52,7 @@
 
     .faq-item {@apply p-6 text-left w-full cursor-pointer bg-white border border-[#EFF0F6] rounded-2xl transition-all duration-300}
     .faq-text {@apply h-0 origin-top overflow-hidden transition-all duration-300 ease-in-out}
-    .icon-div {@apply w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center shrink-0}
+    .icon-div {@apply w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center shrink-0}
     .transparent-card {@apply rounded-[16px] bg-white/5 border border-white/10 backdrop-blur-md p-4 flex flex-col gap-3}
 
     .outline-hover-btn {@apply text-base font-medium w-full p-3 rounded-full border border-[#EFF0F6] group-hover:border-transparent group-hover:bg-primary group-hover:text-white transition-all duration-200 group-hover:shadow-gradientbtn cursor-pointer}
@@ -66,6 +67,12 @@
     .drawer.active { @apply opacity-100 visible }
     .drawer-content { @apply fixed p-6 shadow-2xl top-0 ltr:right-0 rtl:left-0 ltr:translate-x-full rtl:-translate-x-full z-50 w-[85%] max-w-[360px] h-screen overflow-y-auto transition-all duration-500 bg-white }
     .drawer.active .drawer-content { @apply ltr:translate-x-0 rtl:translate-x-0 }
+
+    .drawer-lang-dropdown { @apply rounded-2xl border border-[#EFF0F6] bg-white overflow-hidden }
+    .drawer-lang-dropdown .dropdown-list { @apply scale-y-100 max-h-0 opacity-0 overflow-hidden border-t border-[#EFF0F6] py-0;
+        transition: max-height 300ms ease, opacity 300ms ease;
+    }
+    .drawer-lang-dropdown .dropdown-list.active { @apply max-h-40 opacity-100 py-3 }
     .drawer-header { @apply flex justify-between gap-5 p-4 border-b border-slate-200 }
     .drawer-title { @apply capitalize text-lg font-medium }
     .drawer-body { @apply px-5 py-8 }
@@ -74,6 +81,7 @@
     .db-field-title { @apply text-sm font-medium block mb-2 }
     .db-field-title.required { @apply after:content-['*'] ltr:after:ml-1 rtl:after:mr-1 after:text-red-500 }
     .db-field-control { @apply outline-none block w-full h-12 px-3 pb-[2px] rounded-lg border transition bg-white border-[#EFF0F6] focus-within:border-primary/20 }
+    .db-field-control::placeholder { @apply text-[#A0A3BD] text-sm}
     .db-multiple-field { @apply flex items-center w-full h-10 rounded-md border transition bg-white border-gray-200 focus-within:border-primary/20 }
     .db-multiple-field input { @apply w-1/2 h-full px-3 pb-[2px] ltr:border-l rtl:border-r first:border-none border-gray-200 transition }
     .db-multiple-field button { @apply rounded-md h-8 ltr:mr-[3px] rtl:ml-[3px] px-4 text-base transition bg-primary/10 text-primary hover:bg-primary hover:text-white }
@@ -87,9 +95,14 @@
     .db-field-control[type=file] { @apply relative ltr:pl-0 rtl:pr-0 transition before:transition before:content-[''] before:absolute before:top-0 ltr:before:left-[107px] rtl:before:right-[113px] before:z-10 before:w-[1px] before:h-full before:bg-gray-200 focus-within:before:bg-primary/20 }
     .db-field-control[type=file]::-webkit-file-upload-button,
     .db-field-control[type=file]::file-selector-button { @apply h-10 pl-4 pb-1 pr-7 rounded-l-lg text-sm text-paragraph cursor-pointer transition bg-white border-none }
-    .checkbox:checked { @apply border-none }
+    /* .checkbox:checked { @apply border-none }
     .checkbox:checked + .check-icon { @apply flex }
-    .checkbox:checked + .checkmark { @apply bg-primary border-primary }
+    .checkbox:checked + .checkmark { @apply bg-primary border-primary } */
+    .custom-checkbox { @apply relative w-4 h-4 cursor-pointer shrink-0}
+    .custom-checkbox-field { @apply absolute z-10 opacity-0 w-full h-full appearance-none cursor-pointer }
+    .custom-checkbox-icon { @apply absolute top-0 left-0 w-full h-full text-center rounded leading-[14px] text-[10px] border cursor-pointer border-heading text-white }
+    .custom-checkbox-field:checked + .custom-checkbox-icon { @apply bg-primary border-primary }
+
 
 .swiper {
   width: 100%;

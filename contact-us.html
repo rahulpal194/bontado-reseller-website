@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/fonts/typography/zalando/zalando.css">
     <link rel="stylesheet" href="/lib/swiper/bundle.min.css">
+    <link rel="stylesheet" href="/fonts/icon/iconly.css">
     <script defer src="/js/script.js"></script>
+    <script defer src="/js/sticky.js"></script>
     <script defer src="/js/dropdown.js"></script>
     <script defer src="/js/drawer.js"></script>
     <script defer src="/lib/swiper/bundle.min.js"></script>
@@ -103,12 +105,13 @@
                 <h1 class="hero-heading text-center! font-semibold!">Send us a message or give us a call</h1>
                 <p class="hero-description text-center!">Whether you're looking to launch your restaurant ordering platform, become a partner, or simply have a question, we're here to help.</p>
             </div>
-
             <div class="flex md:flex-row flex-col-reverse gap-x-24 gap-y-12">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-x-12">
                     <div>
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0"></div>
+                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0 flex items-center justify-center">
+                                <i class="icon-line-support text-xl text-primary"></i>
+                            </div>
                             <h6 class="text-[22px] font-medium">Talk with Sales</h6>
                         </div>
                         <p class="text-lg">Phone: <span class="text-[#4187FF]">+5632569874</span></p>
@@ -116,7 +119,9 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0"></div>
+                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0 flex items-center justify-center">
+                                <i class="icon-line-chat text-xl text-primary"></i>
+                            </div>
                             <h6 class="text-[22px] font-medium">Chat with Support</h6>
                         </div>
                         <p class="text-lg">Phone: <span class="text-[#4187FF]">+5632569874</span></p>
@@ -124,7 +129,9 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-3 mb-4">
-                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0"></div>
+                            <div class="w-11 h-11 rounded-full bg-[#FFE9E1] shrink-0 flex items-center justify-center">
+                                <i class="icon-line-house text-xl text-primary"></i>
+                            </div>
                             <h6 class="text-[22px] font-medium">Address</h6>
                         </div>
                         <p class="text-lg">Bontado Ltd.</p>
@@ -159,7 +166,7 @@
                                 <textarea name="w3review" rows="4" class="db-field-control h-24!"></textarea>
                             </div>
                         </div>
-                       <button class="primary-button block ml-auto">Send Message</button>
+                       <button class="primary-button ml-auto">Send Message <i class="icon-line-send text-xl"></i></button>
                     </form>
                 </div>
             </div>
@@ -185,7 +192,7 @@
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
                         <div class="icon-div">
-                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                           <i class="icon-line-plus text-base rotate-0 transition-rotate duration-300"></i>
                         </div>
                     </div>
                     <div class="faq-text">
@@ -196,7 +203,7 @@
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
                         <div class="icon-div">
-                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                            <i class="icon-line-plus text-base rotate-0 transition-rotate duration-300"></i>
                         </div>
                     </div>
                     <div class="faq-text">
@@ -207,7 +214,7 @@
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
                         <div class="icon-div">
-                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                            <i class="icon-line-plus text-base transition-rotate duration-300"></i>
                         </div>
                     </div>
                     <div class="faq-text">
@@ -232,8 +239,8 @@
                     <h2 class="hero-heading font-semibold text-center">Join the movement toward restaurant ownership</h2>
                     <p class="section-description text-center">Whether you're a restaurant looking for independence or an agency building recurring revenue, Bontado gives you the platform to grow on your terms.</p>
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-3 gap-x-6 mt-8">
-                        <button class="primary-button w-full sm:w-auto">I run a restaurant</button>
-                        <button class="outline-button w-full sm:w-auto">I am an agency or reseller</button>
+                        <button class="primary-button w-full sm:w-auto">I run a restaurant <i class="icon-arrow-right text-xl"></i></button>
+                        <button class="outline-button w-full sm:w-auto">I am an agency or reseller <i class="icon-arrow-right text-xl"></i></button>
                     </div>
                 </div>
             </div>
@@ -253,24 +260,24 @@
                 <img src="/images/logo.png">
             </a>
             <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
-                <li><a href="">Home</a></li>
-                <li><a href="">Restaurant</a></li>
-                <li><a href="">Partner</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
             </ul>
             <div class="flex gap-2">
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-facebook text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-linkedin text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-instagram text-xl"></i></a>
             </div>
         </nav>
         <div class="border-t border-[#EFF0F6] py-7 mt-8">
             <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
                 <span class="text-base">© All rights reserved. Bontado.</span>
                 <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of use</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-condition.html">Terms of use</a></li>
                     <li><a href="#" class="back-to-top">Back to top</a></li>
                 </ul>
             </nav>

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/fonts/typography/zalando/zalando.css">
+    <link rel="stylesheet" href="/fonts/icon/iconly.css">
     <script defer src="/js/script.js"></script>
+    <script defer src="/js/sticky.js"></script>
     <script defer src="/js/dropdown.js"></script>
     <script defer src="/js/drawer.js"></script>
     <title>Restaurant</title>
@@ -101,8 +103,8 @@
                     <h1 class="hero-heading"><span class="font-semibold">Your own online ordering.</span> Zero commissions. Plus extra orders when you want them.</h1>
                     <p class="hero-description max-w-[550px]">Take orders directly through your own branded website and app — and list on the Bontado marketplace whenever you want more reach. You keep your customers, your data, and your margin.</p>
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-y-3 gap-x-6">
-                        <button class="primary-button w-full sm:w-auto">Start Free</button>
-                        <button class="outline-button w-full sm:w-auto">Book a Demo</button>
+                        <button class="primary-button w-full sm:w-auto">Start Free <i class="icon-arrow-right text-xl leading-none"></i></button>
+                        <button class="outline-button w-full sm:w-auto">Book a Demo <i class="icon-arrow-right text-xl leading-none"></i></button>
                     </div>
                 </div>
                 <div class="basis-1/2 flex justify-end">
@@ -137,26 +139,31 @@
                     <ul class="flex flex-col gap-3">
                         <li key={item} class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
+                            <i class="icon-line-close text-sm text-paragraph"></i>
                           </div>
                           <span class="text-paragraph text-base leading-tight">High commissions (up to 30%)</span>
                         </li>
                         <li key={item} class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
+                            <i class="icon-line-close text-sm text-paragraph"></i>
                           </div>
                           <span class="text-paragraph text-base leading-tight">No brand ownership</span>
                         </li>
                         <li key={item} class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
+                            <i class="icon-line-close text-sm text-paragraph"></i>
                           </div>
                           <span class="text-paragraph text-base leading-tight">Limited customer data</span>
                         </li>
                         <li key={item} class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
+                            <i class="icon-line-close text-sm text-paragraph"></i>
                           </div>
                           <span class="text-paragraph text-base leading-tight">Dependency on third-party platforms</span>
                         </li>
                         <li key={item} class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center">
+                            <i class="icon-line-close text-sm text-paragraph"></i>
                           </div>
                           <span class="text-paragraph text-base leading-tight">Customers belong to the aggregator</span>
                         </li>
@@ -168,26 +175,31 @@
                     <ul class="flex flex-col gap-3">
                         <li class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
+                            <i class="icon-line-check text-sm text-white"></i>
                           </div>
                           <span class="text-heading font-medium text-base leading-tight">Own branded website and app</span>
                         </li>
                         <li class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
+                            <i class="icon-line-check text-sm text-white"></i>
                           </div>
                           <span class="text-heading font-medium text-base leading-tight">Full customer ownership</span>
                         </li>
                         <li class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
+                            <i class="icon-line-check text-sm text-white"></i>
                           </div>
                           <span class="text-heading font-medium text-base leading-tight">Commission-free direct orders</span>
                         </li>
                         <li class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
+                            <i class="icon-line-check text-sm text-white"></i>
                           </div>
                           <span class="text-heading font-medium text-base leading-tight">Optional marketplace demand</span>
                         </li>
                         <li class="flex items-start gap-3">
                           <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
+                            <i class="icon-line-check text-sm text-white"></i>
                           </div>
                           <span class="text-heading font-medium text-base leading-tight">Optional marketplace demand</span>
                         </li>
@@ -215,8 +227,8 @@
                 <div class="md:flex-[1_1_40%]">
                     <div class="card ">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-web text-xl"></i>
                             </div>
                         </div>
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Branded Ordering Website</h6>
@@ -227,8 +239,8 @@
                 <div class="md:flex-[1_1_calc(25%-0.5rem)] gap-6 flex flex-col">
                     <div class="card">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-phone text-xl"></i>
                             </div>
                         </div>
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Installable Mobile App (PWA)</h6>
@@ -236,8 +248,8 @@
                     </div>
                     <div class="card">
                         <div class="flex justify-between items-start mb-6">
-                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-qr text-xl"></i>
                             </div>
                         </div>
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Cart, Checkout & Payments</h6>
@@ -247,8 +259,8 @@
                 <div class="flex md:flex-nowrap flex-wrap gap-6">
                     <div class="card">
                     <div class="flex justify-between items-start mb-8">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                        <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                            <i class="icon-line-table text-xl"></i>
                         </div>
                     </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Loyalty & One-tap Reorder</h6>
@@ -256,8 +268,8 @@
                     </div>
                     <div class="card">
                     <div class="flex justify-between items-start mb-8">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                        <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                            <i class="icon-line-card text-xl"></i>
                         </div>
                     </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Marketplace Listing</h6>
@@ -265,8 +277,8 @@
                     </div>
                     <div class="card">
                     <div class="flex justify-between items-start mb-8">
-                        <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                        <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                            <i class="icon-line-chart text-xl"></i>
                         </div>
                     </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Unified Order Dashboard</h6>
@@ -292,21 +304,21 @@
                     <p class="section-description lg:text-left text-center">Switch the marketplace on for more discovery, off whenever you like. Fair flat terms — not a 30% commission trap. Your customers and their data stay with you, not the platform.</p>
                     <div class="grid grid-cols-1 gap-4 mt-6">
                         <div class="flex gap-3 items-center">
-                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"></div>
+                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"><i class="icon-line-sperk text-xl text-primary"></i></div>
                             <div>
                                 <span class="text-lg font-medium">Flip on demand in one click</span>
                                 <p class="text-sm text-paragraph">Toggle marketplace visibility instantly when you want more orders.</p>
                             </div>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"></div>
+                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"><i class="icon-line-star text-xl text-primary"></i></div>
                             <div>
                                 <span class="text-lg font-medium">Flat, transparent fees</span>
                                 <p class="text-sm text-paragraph">Toggle marketplace visibility instantly when you want more orders.</p>
                             </div>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"></div>
+                            <div class="w-11 h-11 rounded-lg bg-[#FFE9E1] flex justify-center items-center shrink-0"><i class="icon-line-heart text-xl text-primary"></i></div>
                             <div>
                                 <span class="text-lg font-medium">You keep the customer</span>
                                 <p class="text-sm text-paragraph">Toggle marketplace visibility instantly when you want more orders.</p>
@@ -337,10 +349,12 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="card p-6!">
                     <div class="absolute top-auto max-md:-bottom-4 max-md:left-1/2 max-md:-translate-x-1/2 md:top-1/2 md:-right-4 md:-translate-y-1/2 w-8 h-8 rounded-full text-primary border border-[#EFF0F6] bg-white flex items-center justify-center max-md:rotate-90">
-                        →
+                       <i class="icon-arrow-right"></i>
                     </div>
                     <div class="flex justify-between items-center mb-6">
-                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl"></div>
+                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl flex items-center justify-center">
+                            <i class="icon-chef text-2xl text-primary"></i>
+                        </div>
                         <span class="text-base font-medium text-[#A0A3BD]">01</span>
                     </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-3">Add Your Menu</h6>
@@ -348,10 +362,12 @@
                 </div>
                 <div class="card p-6!">
                     <div class="absolute top-auto max-md:-bottom-4 max-md:left-1/2 max-md:-translate-x-1/2 md:top-1/2 md:-right-4 md:-translate-y-1/2 w-8 h-8 rounded-full text-primary border border-[#EFF0F6] bg-white flex items-center justify-center max-md:rotate-90">
-                        →
+                        <i class="icon-arrow-right"></i>
                     </div>
                     <div class="flex justify-between items-center mb-6">
-                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl"></div>
+                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl flex items-center justify-center">
+                            <i class="icon-magic text-2xl text-primary"></i>
+                        </div>
                         <span class="text-base font-medium text-[#A0A3BD]">02</span>
                     </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-3">Brand Your Storefront</h6>
@@ -359,7 +375,9 @@
                 </div>
                 <div class="card p-6!">
                     <div class="flex justify-between items-center mb-6">
-                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl"></div>
+                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl flex items-center justify-center">
+                            <i class="icon-rocket text-2xl text-primary"></i>
+                        </div>
                         <span class="text-base font-medium text-[#A0A3BD]">03</span>
                     </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-3">Go Live & Take Orders</h6>
@@ -387,8 +405,8 @@
                     <div class="card">
                         <div class="cta-glow-2"></div>
                         <div class="flex justify-between items-start mb-8">
-                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <div class="w-14 h-14 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-wallet text-2xl"></i>
                             </div>
                         </div>
                         <h6 class="text-[22px] font-semibold leading-none mb-4">Keep every euro</h6>
@@ -399,8 +417,8 @@
                 <div class="flex-auto md:flex-[1_1_calc(25%-0.5rem)] gap-6 flex flex-col">
                     <div class="card">
                         <div class="flex justify-between items-start mb-4">
-                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-heart text-xl"></i>
                             </div>
                         </div>
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Own your customers</h6>
@@ -408,8 +426,8 @@
                     </div>
                     <div class="card">
                         <div class="flex justify-between items-start mb-4">
-                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-home text-xl"></i>
                             </div>
                         </div>
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Get found</h6>
@@ -419,8 +437,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-auto">
                     <div class="card">
                         <div class="flex justify-between items-start mb-4">
-                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-rework text-xl"></i>
                             </div>
                         </div>
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Keep them coming back</h6>
@@ -428,8 +446,8 @@
                     </div>
                     <div class="card">
                         <div class="flex justify-between items-start mb-4">
-                            <div class="w-10 h-10 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18H3"/><path d="M5 12H2"/><path d="M9 6H2"/></svg>
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-star text-xl"></i>
                             </div>
                         </div>
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Your brand, your app</h6>
@@ -458,7 +476,7 @@
                         <h2 class="section-heading text-white mb-4! text-center md:text-left">Coming from GloriaFood?</h2>
                         <p class="section-description text-white/70! md:text-left text-center">GloriaFood retires April 30, 2027. Move now — we migrate your menu for free, with no downtime. Our team handles the heavy lifting so you don't miss an order.</p>
                     </div>
-                    <button class="primary-button">Talk to migration team</button>
+                    <button class="primary-button">Talk to migration team <i class="icon-arrow-right text-base"></i></button>
                 </div>
             </div>
         </div>
@@ -484,22 +502,26 @@
                     <h6 class="text-[42px] font-medium leading-tight">10$<sub class="text-sm text-paragraph">/month</sub></h6>
                     <ul class="flex flex-col gap-3 my-8">
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Branded website</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Cart, checkout & payments</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Order dashboard</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Email support</span>
                         </li>
@@ -513,22 +535,26 @@
                     <h6 class="text-[42px] font-medium leading-tight">10$<sub class="text-sm text-paragraph">/month</sub></h6>
                     <ul class="flex flex-col gap-3 my-8">
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Branded website</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Cart, checkout & payments</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Order dashboard</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Email support</span>
                         </li>
@@ -541,22 +567,26 @@
                     <h6 class="text-[42px] font-medium leading-tight">10$<sub class="text-sm text-paragraph">/month</sub></h6>
                     <ul class="flex flex-col gap-3 my-8">
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Branded website</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Cart, checkout & payments</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Order dashboard</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-[#f4f4f4] flex items-center justify-center mt-0.5">
+                            <div class="w-6 h-6 rounded-full bg-[#FFF5F1] flex items-center justify-center mt-0.5">
+                                <i class="icon-line-check text-primary text-xs"></i>
                             </div>
                             <span class="text-[16px]">Email support</span>
                         </li>
@@ -565,9 +595,9 @@
                 </div>
             </div>
             <div class="flex gap-3 sm:gap-8 items-center flex-col sm:flex-row justify-center">
-                <p class="text-paragraph text-sm">0% commission on direct orders</p>
-                <p class="text-paragraph text-sm">Transparent monthly pricing</p>
-                <p class="text-paragraph text-sm">No hidden fees</p>
+                <p class="text-paragraph text-sm"><i class="icon-line-check text-primary text-base mr-2"></i>0% commission on direct orders</p>
+                <p class="text-paragraph text-sm"><i class="icon-line-check text-primary text-base mr-2"></i>Transparent monthly pricing</p>
+                <p class="text-paragraph text-sm"><i class="icon-line-check text-primary text-base mr-2"></i>No hidden fees</p>
             </div>
         </div>
     </section>
@@ -585,8 +615,8 @@
                     <h2 class="hero-heading font-semibold text-center">Start taking commission-free orders</h2>
                     <p class="section-description text-center">Launch your branded ordering website and app, own your customer relationships, and grow on your terms.</p>
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-3 gap-x-6 mt-8">
-                        <button class="primary-button w-full sm:w-auto">Start Free</button>
-                        <button class="outline-button w-full sm:w-auto">Book a Demo</button>
+                        <button class="primary-button w-full sm:w-auto">Start Free <i class="icon-arrow-right text-xl"></i></button>
+                        <button class="outline-button w-full sm:w-auto">Book a Demo <i class="icon-arrow-right text-xl"></i></button>
                     </div>
                 </div>
             </div>
@@ -605,24 +635,24 @@
                 <img src="/images/logo.png">
             </a>
             <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
-                <li><a href="">Home</a></li>
-                <li><a href="">Restaurant</a></li>
-                <li><a href="">Partner</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
             </ul>
             <div class="flex gap-2">
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-facebook text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-linkedin text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-instagram text-xl"></i></a>
             </div>
         </nav>
         <div class="border-t border-[#EFF0F6] py-7 mt-8">
             <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
                 <span class="text-base">© All rights reserved. Bontado.</span>
                 <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of use</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-condition.html">Terms of use</a></li>
                     <li><a href="#" class="back-to-top">Back to top</a></li>
                 </ul>
             </nav>

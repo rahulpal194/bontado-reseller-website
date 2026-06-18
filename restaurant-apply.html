@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/fonts/typography/zalando/zalando.css">
+    <link rel="stylesheet" href="/lib/swiper/bundle.min.css">
+    <link rel="stylesheet" href="/fonts/icon/iconly.css">
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/dropdown.js"></script>
+    <script defer src="/js/drawer.js"></script>
+    <script defer src="/lib/swiper/bundle.min.js"></script>
+    <script defer src="/lib/swiper/initialize.js"></script>
+    <title>Restaurant Apply</title>
+</head>
+<body>
+
+    <header class="w-full top-4 db-header sticky-header">
+        <div class="container">
+            <nav class="flex justify-between items-center container z-30 p-3! transition-all duration-200">
+            <a href="#" class="lg:ml-3">
+                <img src="/images/logo.png">
+            </a>
+            <ul class="text-base font-medium hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="flex items-center gap-3">
+                <div class="relative dropdown-group w-fit hidden lg:flex">
+                    <button class="flex items-center justify-center gap-1.5 w-fit rounded-3xl capitalize text-sm font-medium h-10 lg:h-12 px-4 lg:px-6 border transition text-heading bg-white border-[#EFF0F6] dropdown-btn">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                        <span class="whitespace-nowrap hidden lg:block">english</span>
+                    </button>
+                    <ul class="p-2 min-w-[180px] rounded-lg shadow-xl absolute top-14 right-0 z-10 border border-gray-200 bg-white dropdown-list">
+                        <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">english</span>
+                        </li>
+                        <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">arabic</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="primary-button h-10 lg:h-12 px-6! hidden lg:flex items-center">Login</button>
+                <button id="mobile-menu-btn" data-drawer="#mobile-menu" class="lg:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 rounded-lg cursor-pointer" aria-label="Toggle menu">
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                </button>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="drawer">
+        <div class="drawer-content">
+            <div class="flex justify-between items-center mb-8">
+                <a href="#">
+                    <img src="/images/logo.png" class="h-8">
+                </a>
+                <button class="drawer-close w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer" aria-label="Close menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-2 mb-6">
+                <li><a href="/index.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Home</a></li>
+                <li><a href="/restaurant.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Restaurant</a></li>
+                <li><a href="/partner.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Partner</a></li>
+                <li><a href="/about-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">About Us</a></li>
+                <li><a href="/contact-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Contact Us</a></li>
+            </ul>
+            <div class="dropdown-group w-full lg:hidden mb-6 drawer-lang-dropdown">
+                <button class="flex items-center justify-center gap-1.5 w-full capitalize text-sm font-medium h-10 px-4 transition text-heading bg-white dropdown-btn">
+                    <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                    <span class="whitespace-nowrap">english</span>
+                </button>
+                <ul class="p-2 w-full bg-white dropdown-list">
+                    <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">english</span>
+                    </li>
+                    <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">arabic</span>
+                    </li>
+                </ul>
+            </div>
+            <button class="primary-button h-10 lg:h-12 px-6! lg:hidden flex items-center w-full justify-center">Login</button>
+        </div>
+    </div>
+
+    <!--========================
+          HERO PART START
+    ==========================-->
+    <section class="relative">
+        <div class="relative h-[882px]">
+            <img class="absolute inset-0 w-full h-full object-cover" src="/images/restaurant-hero.jpg" alt="Apply">
+            <div class="absolute inset-0 bg-linear-to-l from-black/20 to-black/70 z-10"></div>
+            <div class="absolute inset-0 z-20 container flex items-start max-lg:justify-center lg:items-center pt-32 lg:pt-40 ">
+                <div class="lg:max-w-[400px] w-full text-white shrink">
+                    <h1 class="hero-heading font-semibold">Build your food business online with Bontado</h1>
+                    <p class="hero-description">Take orders directly through your own branded website and app. You keep your customers, your data, and your margin.</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative z-20 mt-[-660px] sm:mt-[-650px] lg:mt-[-882px] container">
+            <div class="flex lg:justify-end justify-center pt-40 pb-12 sm:pb-24">
+                <div class="card lg:max-w-[580px] w-full">
+                    <form>
+                        <h2 class="text-[36px] font-semibold leading-tight mb-8">Get Started with Bontado</h2>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-6 mb-8">
+                            <div class="col-span-2 mb-2">
+                                <h6 class="text-lg font-semibold leading-tight">Owner Info</h6>
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="firstName" class="db-field-title">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="db-field-control" placeholder="Enter Your First Name">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="lastName" class="db-field-title">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="db-field-control" placeholder="Enter Your Last Name">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="email" class="db-field-title">Email</label>
+                                <input type="email" id="email" name="email" class="db-field-control" placeholder="Enter Your Email">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="phone" class="db-field-title">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="db-field-control" placeholder="Enter Your Phone Number">
+                            </div>
+                            <div class="col-span-2 mb-2 mt-4">
+                                <h6 class="text-lg font-semibold leading-tight">Owner Info</h6>
+                            </div>
+                            <div class="col-span-2">
+                                <label for="businessName" class="db-field-title">Business Name</label>
+                                <input type="text" id="businessName" name="businessName" class="db-field-control" placeholder="Enter Your Business Name">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="country" class="db-field-title">Country/Region</label>
+                                <input type="text" id="country" name="country" class="db-field-control" placeholder="Enter Your Country/Region">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="postCode" class="db-field-title">Post Code</label>
+                                <input type="text" id="postCode" name="postCode" class="db-field-control" placeholder="Enter Your Post Code">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="clientCount" class="db-field-title">Business Street Address*</label>
+                                <input type="text" id="clientCount" name="clientCount" class="db-field-control" placeholder="Enter Your Street Address">
+                            </div>
+                        </div>
+                        <button type="submit" class="primary-button w-full">Join Waitlist</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+           HERO PART END
+    ==========================-->
+
+
+    <!--========================
+       WHY BONTADO PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <span class="section-title">Why Bontado</span>
+        <div class="container">
+            <div class="max-w-[790px] mx-auto mb-12">
+                 <h1 class="section-heading text-center">Built for restaurant owners, not aggregators</h1>
+                 <p class="section-description">We put ownership back in your hands — your brand, your customers, your data, your revenue. No middlemen taking a cut of every order you worked hard to earn.</p>
+            </div>
+            <div class="ecosystem-layout">  
+                <div class="flex-auto md:flex-[1_1_40%]">
+                    <div class="card">
+                        <div class="cta-glow-2"></div>
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-14 h-14 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-wallet text-2xl"></i>
+                            </div>
+                        </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-4">Keep every euro</h6>
+                        <p class="text-base text-paragraph leading-tight mb-8 max-w-[380px]">Commission-free ordering through your own channel. The 30% you used to lose every month? That stays in your pocket — every single order, forever.</p>
+                        <p class="text-base font-medium flex items-center gap-3 mb-8"><span class="hero-heading font-semibold mb-0! bg-linear-to-r from-primary to-[#FF004D] bg-clip-text text-transparent">0%</span> commission on direct orders</p>
+                    </div>
+                </div>
+                <div class="flex-auto md:flex-[1_1_calc(25%-0.5rem)] gap-6 flex flex-col">
+                    <div class="card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-heart text-xl"></i>
+                            </div>
+                        </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Own your customers</h6>
+                        <p class="text-base text-paragraph leading-tight">Their data stays with you, never an aggregator.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-home text-xl"></i>
+                            </div>
+                        </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Get found</h6>
+                    <p class="text-base text-paragraph leading-tight">Optional marketplace demand whenever you want more orders.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-auto">
+                    <div class="card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-rework text-xl"></i>
+                            </div>
+                        </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Keep them coming back</h6>
+                        <p class="text-base text-paragraph leading-tight">Built-in loyalty and one-tap reorder.</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-11 h-11 bg-[#EFF0F6] rounded-lg flex items-center justify-center">
+                                <i class="icon-line-star text-xl"></i>
+                            </div>
+                        </div>
+                        <h6 class="text-[22px] font-semibold leading-none mb-2">Your brand, your app</h6>
+                        <p class="text-base text-paragraph leading-tight">A storefront and app that look like your business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+       WHY BONTADO PART END
+    ==========================-->
+
+
+    <!--========================
+        HOW WORKS PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <span class="section-title">How It Works</span>
+        <div class="container">
+            <div class="max-w-[790px] mx-auto mb-12">
+                <h1 class="section-heading text-center">Live in days, not weeks</h1>
+                <p class="max-w-[635px] section-description">Three simple steps is all it takes to replace your delivery-app dependency with a branded ordering channel that's fully yours.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-6!">
+                    <div class="absolute top-auto max-md:-bottom-4 max-md:left-1/2 max-md:-translate-x-1/2 md:top-1/2 md:-right-4 md:-translate-y-1/2 w-8 h-8 rounded-full text-primary border border-[#EFF0F6] bg-white flex items-center justify-center max-md:rotate-90">
+                        <i class="icon-arrow-right"></i>
+                    </div>
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl flex items-center justify-center">
+                            <i class="icon-chef text-primary text-2xl"></i>
+                        </div>
+                        <span class="text-base font-medium text-[#A0A3BD]">01</span>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-3">Add Your Menu</h6>
+                    <p class="text-base text-paragraph leading-tight">Import from a spreadsheet, your old site. We handle photos and descriptions.</p>
+                </div>
+                <div class="card p-6!">
+                    <div class="absolute top-auto max-md:-bottom-4 max-md:left-1/2 max-md:-translate-x-1/2 md:top-1/2 md:-right-4 md:-translate-y-1/2 w-8 h-8 rounded-full text-primary border border-[#EFF0F6] bg-white flex items-center justify-center max-md:rotate-90">
+                        <i class="icon-arrow-right"></i>
+                    </div>
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl flex items-center justify-center">
+                            <i class="icon-magic text-primary text-2xl"></i>
+                        </div>
+                        <span class="text-base font-medium text-[#A0A3BD]">02</span>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-3">Brand Your Storefront</h6>
+                    <p class="text-base text-paragraph leading-tight">Your logo, colors, and tone — applied across your website, app, and emails.</p>
+                </div>
+                <div class="card p-6!">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl flex items-center justify-center">
+                            <i class="icon-rocket text-primary text-2xl"></i>
+                        </div>
+                        <span class="text-base font-medium text-[#A0A3BD]">03</span>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-3">Go Live & Take Orders</h6>
+                    <p class="text-base text-paragraph leading-tight">Connect your domain and payments, and start taking commission-free orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+        HOW WORKS PART END
+    ==========================-->
+
+
+    <!--========================
+           CTA PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <div class="container">
+            <div class="cta-section">
+                <div class="max-w-[790px] mx-auto">
+                    <h2 class="hero-heading font-semibold text-center">Start taking commission-free orders</h2>
+                    <p class="section-description text-center">Launch your branded ordering website and app, own your customer relationships, and grow on your terms.</p>
+                    <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-3 gap-x-6 mt-8">
+                        <button class="primary-button w-full sm:w-auto">Start Free <i class="icon-arrow-right text-xl"></i></button>
+                        <button class="outline-button w-full sm:w-auto">Book a Demo <i class="icon-arrow-right text-xl"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+           CTA PART END
+    ==========================-->
+
+
+    <!--========================
+         FOOTER PART START
+    ==========================-->
+    <footer class="container pt-12 sm:pt-24">
+        <nav class="flex justify-between flex-col gap-3 flex-wrap sm:flex-row items-center z-30 transition-all duration-200">
+            <a href="#">
+                <img src="/images/logo.png">
+            </a>
+            <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="flex gap-2">
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-facebook text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-linkedin text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-instagram text-xl"></i></a>
+            </div>
+        </nav>
+        <div class="border-t border-[#EFF0F6] py-7 mt-8">
+            <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
+                <span class="text-base">© All rights reserved. Bontado.</span>
+                <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-condition.html">Terms of use</a></li>
+                    <li><a href="#" class="back-to-top">Back to top</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <!--========================
+          FOOTER PART END
+    ==========================-->
+</body>
+</html>

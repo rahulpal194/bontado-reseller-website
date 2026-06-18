@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/fonts/typography/zalando/zalando.css">
+    <link rel="stylesheet" href="/fonts/icon/iconly.css">
     <script defer src="/js/script.js"></script>
+    <script defer src="/js/sticky.js"></script>
     <script defer src="/js/dropdown.js"></script>
     <script defer src="/js/drawer.js"></script>
     <title>Partner</title>
@@ -101,8 +103,8 @@
                     <h1 class="hero-heading"><span class="font-semibold">Build a recurring revenue machine — </span> on a platform that's yours.</h1>
                     <p class="hero-description ">Sign a restaurant once and earn every month after. Bontado is the white-label ordering platform behind your agency — fully branded to you, with an optional marketplace that turns every client into two income streams instead of one.</p>
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-y-3 gap-x-6">
-                        <button class="primary-button w-full sm:w-auto">Apply to the Partner Program</button>
-                        <button class="outline-button w-full sm:w-auto">Watch 2-min Overview</button>
+                        <button class="primary-button w-full sm:w-auto">Apply to the Partner Program <i class="icon-arrow-right text-xl"></i></button>
+                        <button class="outline-button w-full sm:w-auto"><i class="icon-line-play text-xl"></i>Watch 2-min Overview</button>
                     </div>
                 </div>
                 <div class="basis-1/2 flex justify-end">
@@ -130,22 +132,22 @@
                         <div class="rounded-[16px] bg-white/5 border border-white/10 backdrop-blur-md p-6 flex flex-col gap-3">
                             <div class="flex flex-col items-center gap-3">
                                 <div class="bg-white/5 rounded-[10px] p-3 flex items-center gap-3 w-full">
-                                    <i></i>
+                                    <i class="icon-line-lock text-lg text-white/50"></i>
                                     <div>
                                         <span class="text-[10px] font-medium text-white/50">Before</span>
                                         <p class="text-xs font-semibold text-white">Vendor dependency</p>
                                     </div>
                                 </div>
-                                <span class="text-primary">↓</span>
+                                <span class="text-primary"><i class="icon-arrow-right text-sm text-primary rotate-90"></i></span>
                                 <div class="bg-white/30 rounded-[10px] p-3 flex items-center gap-3 w-full">
-                                    <i></i>
+                                    <i class="icon-line-safety text-lg text-white/50"></i>
                                     <div class="h-fit">
                                         <span class="text-[10px] font-medium text-white/80">With Bontado</span>
                                         <p class="text-xs font-semibold text-white">Platform ownership</p>
                                     </div>
                                 </div>
                             </div>
-                            <button class="primary-button py-3 text-base! mt-3">Talk to migration team</button>
+                            <button class="primary-button py-3 text-base! mt-3">Talk to migration team <i class="icon-arrow-right text-xs"></i></button>
                         </div>
                     </div>
                 </div>
@@ -169,7 +171,9 @@
             <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[1198px] mx-auto">
                 <div class="card rounded-[20px]!">
                     <div class="flex items-center justify-between mb-5">
-                        <span class="w-14 h-14 rounded-xl bg-[#FFE9E1]"></span>
+                        <span class="w-14 h-14 rounded-xl bg-[#FFE9E1] flex items-center justify-center">
+                            <i class="icon-line-wallet text-2xl text-primary"></i>
+                        </span>
                         <span class="text-primary font-medium text-sm">Stream 1</span>
                     </div>
                     <h3 class="text-heading font-semibold text-[26px]"> Subscription margin</h3>
@@ -177,16 +181,19 @@
                 </div>
                 <div class="card rounded-[20px]!">
                     <div class="flex items-center justify-between mb-5">
-                        <span class="w-14 h-14 rounded-xl bg-[#FFE9E1]"></span>
+                        <span class="w-14 h-14 rounded-xl bg-[#FFE9E1] flex items-center justify-center">
+                            <i class="icon-line-home text-2xl text-primary"></i>
+                        </span>
                         <span class="text-primary font-medium text-sm">Stream 2</span>
                     </div>
                     <h3 class="text-heading font-semibold text-[26px]"> Marketplace share</h3>
                     <p class="text-base text-paragraph">When your restaurants switch on the marketplace, you earn on the extra orders too.</p>
                 </div>
             </div>
-
             <div class="bg-[#FCFCFC] border border-[#EFF0F6] px-8 py-6 rounded-[20px] my-8 flex items-center gap-5">
-                <div class="w-11 h-11 rounded-xl bg-[#EFF0F6] flex items-center justify-center shrink-0"></div>
+                <div class="w-11 h-11 rounded-xl bg-[#EFF0F6] flex items-center justify-center shrink-0">
+                    <i class="icon-line-layer text-xl"></i>
+                </div>
                 <h6 class="text-[22px] font-medium">Sign once, earn monthly. Every new client stacks on top of the last — the machine only grows.</h6>
             </div>
             <div class="rounded-3xl overflow-hidden bg-[#FFF9F6] border border-[#FFE9E1] p-8">
@@ -275,7 +282,9 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-8">
                 <div class="card p-6!">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-mike text-2xl text-primary"></i>
+                    </div>
                     <div class="mb-6">
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Refer</h6>
                         <p class="text-base text-paragraph font-light leading-tight">Send us clients, earn recurring commission.</p>
@@ -286,7 +295,9 @@
                     </div>
                 </div>
                 <div class="card p-6!">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-wallet text-2xl text-primary"></i>
+                    </div>
                     <div class="mb-6">
                         <h6 class="text-[22px] font-semibold leading-none mb-2">Resell</h6>
                         <p class="text-base text-paragraph font-light leading-tight">Buy wholesale, set your price, you invoice and support.</p>
@@ -297,7 +308,9 @@
                     </div>
                 </div>
                 <div class="card p-6!">
-                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-14 h-14 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-layer text-2xl text-primary"></i>
+                    </div>
                     <div class="mb-6">
                         <h6 class="text-[22px] font-semibold leading-none mb-2">White-label</h6>
                         <p class="text-base text-paragraph font-light leading-tight">Our brand end to end; clients never see Bontado.</p>
@@ -326,32 +339,44 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="card">
-                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-layer text-xl text-primary"></i>
+                    </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Two revenue streams</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Send us clients, earn recurring commission.</p>
                 </div>
                 <div class="card">
-                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-wallet text-xl text-primary"></i>
+                    </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">You own the price</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Buy wholesale, set your price, you invoice and support.</p>
                 </div>
                 <div class="card">
-                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-menu text-xl text-primary"></i>
+                    </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">One platform, every module</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Our brand end to end; clients never see Bontado.</p>
                 </div>
                 <div class="card">
-                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-stack text-xl text-primary"></i>
+                    </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Multi-tenant from day one</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Manage every client from one dashboard.</p>
                 </div>
                 <div class="card">
-                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-rework text-xl text-primary"></i>
+                    </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Recurring and compounding</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Build your client base once and earn monthly.</p>
                 </div>
                 <div class="card">
-                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6"></div>
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-user-double text-xl text-primary"></i>
+                    </div>
                     <h6 class="text-[22px] font-semibold leading-none mb-2">Real enablement</h6>
                     <p class="text-base text-paragraph font-light leading-tight">Onboarding, sales materials, and partner support.</p>
                 </div>
@@ -374,35 +399,51 @@
                     <p class="section-description lg:text-left text-center">Switch the marketplace on for more discovery, off whenever you like. Fair flat terms — not a 30% commission trap. Your customers and their data stay with you, not the platform.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                         <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center">
+                                <i class="icon-line-stack text-base text-primary"></i>
+                            </div>
                             <span class="text-base font-medium">Multi-tenant admin</span>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center">
+                                <i class="icon-line-menu text-base text-primary"></i>
+                            </div>
                             <span class="text-base font-medium">One login for all restaurants</span>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center">
+                                <i class="icon-line-wallet text-base text-primary"></i>
+                            </div>
                             <span class="text-base font-medium">Wholesale pricing</span>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center">
+                                <i class="icon-line-card text-base text-primary"></i>
+                            </div>
                             <span class="text-base font-medium">Set your own retail pricing</span>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center">
+                                <i class="icon-line-gift text-base text-primary"></i>
+                            </div>
                             <span class="text-base font-medium">Branded billing</span>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center">
+                                <i class="icon-line-web text-base text-primary"></i>
+                            </div>
                             <span class="text-base font-medium">Custom domains</span>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center">
+                                <i class="icon-line-safety text-base text-primary"></i>
+                            </div>
                             <span class="text-base font-medium">No Bontado branding on checkout</span>
                         </div>
                         <div class="flex gap-3 items-center">
-                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center"></div>
+                            <div class="w-9 h-9 rounded-lg bg-[#FFE9E1] flex justify-center items-center">
+                                <i class="icon-line-home text-base text-primary"></i>
+                            </div>
                             <span class="text-base font-medium">Marketplace control per restaurant</span>
                         </div>
                     </div>
@@ -470,7 +511,7 @@
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
                         <div class="icon-div">
-                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                           <i class="icon-line-plus text-base rotate-0 transition-rotate duration-300"></i>
                         </div>
                     </div>
                     <div class="faq-text">
@@ -481,7 +522,7 @@
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
                         <div class="icon-div">
-                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                            <i class="icon-line-plus text-base rotate-0 transition-rotate duration-300"></i>
                         </div>
                     </div>
                     <div class="faq-text">
@@ -492,7 +533,7 @@
                     <div class="flex items-center gap-3 justify-between group-hover:text-primary">
                         <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
                         <div class="icon-div">
-                            <i class="icon-circle-down text-xl rotate-0 transition-rotate duration-300">+</i>
+                            <i class="icon-line-plus text-base transition-rotate duration-300"></i>
                         </div>
                     </div>
                     <div class="faq-text">
@@ -517,7 +558,7 @@
                     <h2 class="hero-heading font-semibold text-center">Start building your revenue machine</h2>
                     <p class="section-description text-center">Launch your own restaurant platform business, generate recurring revenue, and create long-term client value under your own brand.</p>
                     <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-3 gap-x-6 mt-8">
-                        <button class="primary-button w-full sm:w-auto">Apply to the Partner Program</button>
+                        <button class="primary-button w-full sm:w-auto">Apply to the Partner Program <i class="icon-arrow-right text-xl"></i></button>
                     </div>
                 </div>
             </div>
@@ -537,24 +578,24 @@
                 <img src="/images/logo.png">
             </a>
             <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
-                <li><a href="">Home</a></li>
-                <li><a href="">Restaurant</a></li>
-                <li><a href="">Partner</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
             </ul>
             <div class="flex gap-2">
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
-                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-facebook text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-linkedin text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-instagram text-xl"></i></a>
             </div>
         </nav>
         <div class="border-t border-[#EFF0F6] py-7 mt-8">
             <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
                 <span class="text-base">© All rights reserved. Bontado.</span>
                 <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of use</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-condition.html">Terms of use</a></li>
                     <li><a href="#" class="back-to-top">Back to top</a></li>
                 </ul>
             </nav>

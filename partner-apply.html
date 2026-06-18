@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/fonts/typography/zalando/zalando.css">
+    <link rel="stylesheet" href="/lib/swiper/bundle.min.css">
+    <link rel="stylesheet" href="/fonts/icon/iconly.css">
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/dropdown.js"></script>
+    <script defer src="/js/drawer.js"></script>
+    <script defer src="/lib/swiper/bundle.min.js"></script>
+    <script defer src="/lib/swiper/initialize.js"></script>
+    <title>Partner Apply</title>
+</head>
+<body>
+
+    <header class="w-full top-4 db-header sticky-header">
+        <div class="container">
+            <nav class="flex justify-between items-center container z-30 p-3! transition-all duration-200">
+            <a href="#" class="lg:ml-3">
+                <img src="/images/logo.png">
+            </a>
+            <ul class="text-base font-medium hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="flex items-center gap-3">
+                <div class="relative dropdown-group w-fit hidden lg:flex">
+                    <button class="flex items-center justify-center gap-1.5 w-fit rounded-3xl capitalize text-sm font-medium h-10 lg:h-12 px-4 lg:px-6 border transition text-heading bg-white border-[#EFF0F6] dropdown-btn">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                        <span class="whitespace-nowrap hidden lg:block">english</span>
+                    </button>
+                    <ul class="p-2 min-w-[180px] rounded-lg shadow-xl absolute top-14 right-0 z-10 border border-gray-200 bg-white dropdown-list">
+                        <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">english</span>
+                        </li>
+                        <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">arabic</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="primary-button h-10 lg:h-12 px-6! hidden lg:flex items-center">Login</button>
+                <button id="mobile-menu-btn" data-drawer="#mobile-menu" class="lg:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 rounded-lg cursor-pointer" aria-label="Toggle menu">
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                </button>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="drawer">
+        <div class="drawer-content">
+            <div class="flex justify-between items-center mb-8">
+                <a href="#">
+                    <img src="/images/logo.png" class="h-8">
+                </a>
+                <button class="drawer-close w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer" aria-label="Close menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-2 mb-6">
+                <li><a href="/index.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Home</a></li>
+                <li><a href="/restaurant.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Restaurant</a></li>
+                <li><a href="/partner.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Partner</a></li>
+                <li><a href="/about-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">About Us</a></li>
+                <li><a href="/contact-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Contact Us</a></li>
+            </ul>
+            <div class="dropdown-group w-full lg:hidden mb-6 drawer-lang-dropdown">
+                <button class="flex items-center justify-center gap-1.5 w-full capitalize text-sm font-medium h-10 px-4 transition text-heading bg-white dropdown-btn">
+                    <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                    <span class="whitespace-nowrap">english</span>
+                </button>
+                <ul class="p-2 w-full bg-white dropdown-list">
+                    <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">english</span>
+                    </li>
+                    <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">arabic</span>
+                    </li>
+                </ul>
+            </div>
+            <button class="primary-button h-10 lg:h-12 px-6! lg:hidden flex items-center w-full justify-center">Login</button>
+        </div>
+    </div>
+
+    <!--========================
+          HERO PART START
+    ==========================-->
+    <section class="relative">
+        <div class="relative h-[1147px]">
+            <img class="absolute inset-0 w-full h-full object-cover object-top-right" src="/images/partnerApply-banner.png" alt="Apply">
+            <div class="absolute inset-0 bg-linear-to-l from-black/20 to-black/70 z-10"></div>
+            <div class="absolute inset-0 z-20 container flex items-start max-lg:justify-center lg:items-center pt-32 lg:pt-40 ">
+                <div class="lg:max-w-[400px] w-full text-white shrink">
+                    <h1 class="hero-heading font-semibold">Your Revenue Machine Starts Here</h1>
+                    <p class="hero-description">Unlock recurring revenue with monthly commissions and deliver an easy-to-manage restaurant solution to your client network.</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative z-20 mt-[-950px] sm:mt-[-1000px] lg:mt-[-1147px] container">
+            <div class="flex lg:justify-end justify-center pt-40 pb-12 sm:pb-24">
+                <div class="card lg:max-w-[580px] w-full">
+                    <form>
+                        <h6 class="text-[36px] font-semibold leading-tight mb-8">Become a Bontado Partner</h6>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-6 mb-8">
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="firstName" class="db-field-title">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="db-field-control" placeholder="Enter Your First Name">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="lastName" class="db-field-title">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="db-field-control" placeholder="Enter Your Last Name">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="email" class="db-field-title">Email</label>
+                                <input type="email" id="email" name="email" class="db-field-control" placeholder="Enter Your Email">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="phone" class="db-field-title">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="db-field-control" placeholder="Enter Your Phone Number">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="businessName" class="db-field-title">Business Name</label>
+                                <input type="text" id="businessName" name="businessName" class="db-field-control" placeholder="Enter Your Business Name">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="businessUrl" class="db-field-title">Business URL</label>
+                                <input type="url" id="businessUrl" name="businessUrl" class="db-field-control" placeholder="Enter Your Business URL">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="country" class="db-field-title">Country/Region</label>
+                                <input type="text" id="country" name="country" class="db-field-control" placeholder="Enter Your Country/Region">
+                            </div>
+                            <div class="col-span-2 sm:col-span-1">
+                                <label for="postCode" class="db-field-title">Post Code</label>
+                                <input type="text" id="postCode" name="postCode" class="db-field-control" placeholder="Enter Your Post Code">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="clientCount" class="db-field-title">Current Number of Hospitality Client</label>
+                                <input type="text" id="clientCount" name="clientCount" class="db-field-control" placeholder="Enter Your Current Number of Hospitality Client">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="hearAboutUs" class="db-field-title">How Did You Hear About Us?</label>
+                                <input type="text" id="hearAboutUs" name="hearAboutUs" class="db-field-control" placeholder="Enter Your Subject">
+                            </div>
+                            <div class="col-span-2">
+                                <label for="partnershipType" class="db-field-title">Which Type of Partnership Are You Interested In?</label>
+                                <input type="text" id="partnershipType" name="partnershipType" class="db-field-control" placeholder="Enter Your Subject">
+                            </div>
+                            <div class="col-span-2">
+                                <label class="db-field-title">Which Business Type Best Describes You?</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6 mt-3">
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="fmcg" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="fmcg" class="db-field-label text-xs text-heading">FMCG</label>
+                                    </div>
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="digital-agency" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="digital-agency" class="db-field-label text-xs text-heading">Digital Agency</label>
+                                    </div>
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="epos" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="epos" class="db-field-label text-xs text-heading">EPOS</label>
+                                    </div>
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="delivery" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="delivery" class="db-field-label text-xs text-heading">Delivery</label>
+                                    </div>
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="consultancy" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="consultancy" class="db-field-label text-xs text-heading">Consultancy</label>
+                                    </div>
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="middleware" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="middleware" class="db-field-label text-xs text-heading">Middleware</label>
+                                    </div>
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="other" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="other" class="db-field-label text-xs text-heading">Other</label>
+                                    </div>
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="tech" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="tech" class="db-field-label text-xs text-heading">Tech</label>
+                                    </div>
+                                    <div class="db-field-checkbox p-0">
+                                        <div class="custom-checkbox w-3 h-3">
+                                            <input type="checkbox" id="non-tech" name="businessType" class="custom-checkbox-field">
+                                            <i class="icon-line-check custom-checkbox-icon leading-[12px]! text-[9px] rounded-[3px] border-[#6E7191]"></i>
+                                        </div>
+                                        <label for="non-tech" class="db-field-label text-xs text-heading">Non-Tech</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="primary-button w-full">Join Waitlist</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+           HERO PART END
+    ==========================-->
+
+
+    <!--==============================
+       WHY CHOOSE BONTADO PART START
+    =================================-->
+    <section class="relative py-12 sm:py-24">
+        <span class="section-title">Why Choose Bontado?</span>
+        <div class="container">
+            <div class="max-w-[635px] mx-auto mb-12">
+                 <h1 class="section-heading text-center">Why choose the Bontado partner Program?</h1>
+                 <p class="max-w-[635px] section-description">From your branded storefront to loyalty, payments, and a unified order dashboard — every tool your restaurant needs is included, with nothing extra to buy.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-layer text-xl text-primary"></i>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">Two revenue streams</h6>
+                    <p class="text-base text-paragraph font-light leading-tight">Send us clients, earn recurring commission.</p>
+                </div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-wallet text-xl text-primary"></i>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">You own the price</h6>
+                    <p class="text-base text-paragraph font-light leading-tight">Buy wholesale, set your price, you invoice and support.</p>
+                </div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-menu text-xl text-primary"></i>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">One platform, every module</h6>
+                    <p class="text-base text-paragraph font-light leading-tight">Our brand end to end; clients never see Bontado.</p>
+                </div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-stack text-xl text-primary"></i>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">Multi-tenant from day one</h6>
+                    <p class="text-base text-paragraph font-light leading-tight">Manage every client from one dashboard.</p>
+                </div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-rework text-xl text-primary"></i>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">Recurring and compounding</h6>
+                    <p class="text-base text-paragraph font-light leading-tight">Build your client base once and earn monthly.</p>
+                </div>
+                <div class="card">
+                    <div class="w-11 h-11 bg-[#FFEBDD] rounded-xl mb-6 flex items-center justify-center">
+                        <i class="icon-line-user-double text-xl text-primary"></i>
+                    </div>
+                    <h6 class="text-[22px] font-semibold leading-none mb-2">Real enablement</h6>
+                    <p class="text-base text-paragraph font-light leading-tight">Onboarding, sales materials, and partner support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==============================
+        WHY CHOOSE BONTADO PART END
+    =================================-->
+
+
+    <!--==============================
+        WHO IT'S FOR PART START
+    =================================-->
+    <section class="relative py-12 sm:py-24">
+        <span class="section-title">Who It’s For</span>
+        <div class="container">
+            <div class="max-w-[790px] mx-auto mb-12">
+                 <h1 class="section-heading text-center">Who is the Bontado partner program for?</h1>
+                 <p class="max-w-[635px] section-description">Anyone who works with restaurants or has contact with restaurateurs can become our partner!</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="card rounded-[20px]! p-6!">
+                    <img class="mb-4 w-full" src="/images/partner-1.png" alt="card-img">
+                    <h3 class="text-lg font-semibold leading-tight mb-2">Restaurant Tech & POS Resellers</h3>
+                    <p class="text-sm text-paragraph line-clamp-2">Add a recurring ordering layer to your hardware and POS deals.</p>
+                </div>
+                <div class="card rounded-[20px]! p-6!">
+                    <img class="mb-4 w-full" src="/images/partner-2.png" alt="card-img">
+                    <h3 class="text-lg font-semibold leading-tight mb-2">Web Development Agencies</h3>
+                    <p class="text-sm text-paragraph line-clamp-2">Turn one-off restaurant builds into monthly platform revenue.</p>
+                </div>
+                <div class="card rounded-[20px]! p-6!">
+                    <img class="mb-4 w-full" src="/images/partner-3.png" alt="card-img">
+                    <h3 class="text-lg font-semibold leading-tight mb-2">Marketing Agencies</h3>
+                    <p class="text-sm text-paragraph line-clamp-2">Own the ordering channel behind every campaign you run.</p>
+                </div>
+                <div class="card rounded-[20px]! p-6!">
+                    <img class="mb-4 w-full" src="/images/partner-4.png" alt="card-img">
+                    <h3 class="text-lg font-semibold leading-tight mb-2">Restaurant Consultants</h3>
+                    <p class="text-sm text-paragraph line-clamp-2">Bring clients a platform they own - and keep earning alongside them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+        WHO IT'S FOR PART END
+    ==========================-->
+
+    <!--========================
+           FAQ PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <span class="section-title">FAQ</span>
+        <div class="container">
+            <div class="max-w-[790px] mx-auto mb-12">
+                <h1 class="section-heading text-center mb-6!">Frequently asked questions</h1>
+                <p class="max-w-[635px] section-description">Everything restaurants and agencies ask before getting started. Still curious? Talk to our team.</p>
+            </div>
+            <div class="flex flex-col gap-3">
+                <div class="faq-item">
+                    <div class="flex items-center gap-3 justify-between group-hover:text-primary">
+                        <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
+                        <div class="icon-div">
+                           <i class="icon-line-plus text-base rotate-0 transition-rotate duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-text">
+                        <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="flex items-center gap-3 justify-between group-hover:text-primary">
+                        <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
+                        <div class="icon-div">
+                            <i class="icon-line-plus text-base rotate-0 transition-rotate duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-text">
+                        <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="flex items-center gap-3 justify-between group-hover:text-primary">
+                        <h6 class="text-lg/[23px] font-medium">Is Bontado a white-label solution?</h6>
+                        <div class="icon-div">
+                            <i class="icon-line-plus text-base transition-rotate duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="faq-text">
+                        <p class="text-base font-normal pt-6">Yes, Bontado is a 100% white-label solution. You can customize the platform with your own logo, domain, colors, and branding. Your clients will only see your brand — we stay completely invisible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!--========================
+           FAQ PART END
+    ==========================-->
+
+
+    <!--========================
+           CTA PART START
+    ==========================-->
+    <section class="relative py-12 sm:py-24">
+        <div class="container">
+            <div class="cta-section">
+                <div class="max-w-[790px] mx-auto">
+                    <h2 class="hero-heading font-semibold text-center">Start building your revenue machine</h2>
+                    <p class="section-description text-center">Launch your own restaurant platform business, generate recurring revenue, and create long-term client value under your own brand.</p>
+                    <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-y-3 gap-x-6 mt-8">
+                        <button class="primary-button w-full sm:w-auto">Apply to the Partner Program <i class="icon-arrow-right text-xl"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========================
+           CTA PART END
+    ==========================-->
+
+
+    <!--========================
+         FOOTER PART START
+    ==========================-->
+    <footer class="container pt-12 sm:pt-24">
+        <nav class="flex justify-between flex-col gap-3 flex-wrap sm:flex-row items-center z-30 transition-all duration-200">
+            <a href="#">
+                <img src="/images/logo.png">
+            </a>
+            <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="flex gap-2">
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-facebook text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-linkedin text-xl"></i></a>
+                <a href="#" class="w-8 h-8 rounded-full bg-[#EFF0F6] flex! items-center justify-center"> <i class="icon-instagram text-xl"></i></a>
+            </div>
+        </nav>
+        <div class="border-t border-[#EFF0F6] py-7 mt-8">
+            <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
+                <span class="text-base">© All rights reserved. Bontado.</span>
+                <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-condition.html">Terms of use</a></li>
+                    <li><a href="#" class="back-to-top">Back to top</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <!--========================
+          FOOTER PART END
+    ==========================-->
+</body>
+</html>

@@ -1,12 +1,3 @@
-window.addEventListener('scroll', function(){
-    const headernav = document.querySelector('.db-header')
-    if(window.pageYOffset >= 30){
-        headernav.classList.add('fixed')
-    }
-    else{
-        headernav.classList.remove('fixed')
-    }
-})
 
 document.addEventListener("DOMContentLoaded", () => {
     const faqs = [...document.querySelectorAll(".faq-item")];
@@ -29,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         iconDiv?.classList.toggle("bg-[#EFF0F6]", !open);
         iconDiv?.classList.toggle("bg-[#FF4800]", open);
-        icon?.classList.toggle("rotate-180", open);
+        icon?.classList.toggle("icon-line-minus", open);
         icon?.classList.toggle("text-white", open);
         item.classList.toggle("border-[#FFCAB5]", open);
         item.classList.toggle("border-[#EFF0F6]", !open);

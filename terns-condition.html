@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/fonts/typography/zalando/zalando.css">
+    <link rel="stylesheet" href="/lib/swiper/bundle.min.css">
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/sticky.js"></script>
+    <script defer src="/js/dropdown.js"></script>
+    <script defer src="/js/drawer.js"></script>
+    <script defer src="/lib/swiper/bundle.min.js"></script>
+    <script defer src="/lib/swiper/initialize.js"></script>
+    <title>Terms & Condition</title>
+</head>
+<body>
+
+    <header class="w-full top-4 db-header">
+        <div class="container">
+            <nav class="flex justify-between items-center container z-30 p-3! transition-all duration-200">
+            <a href="#" class="lg:ml-3">
+                <img src="/images/logo.png">
+            </a>
+            <ul class="text-base font-medium hidden lg:flex gap-6 items-center [&_li]:hover:text-primary">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/restaurant.html">Restaurant</a></li>
+                <li><a href="/partner.html">Partner</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="flex items-center gap-3">
+                <div class="relative dropdown-group w-fit hidden lg:flex">
+                    <button class="flex items-center justify-center gap-1.5 w-fit rounded-3xl capitalize text-sm font-medium h-10 lg:h-12 px-4 lg:px-6 border transition text-heading bg-white border-[#EFF0F6] dropdown-btn">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                        <span class="whitespace-nowrap hidden lg:block">english</span>
+                    </button>
+                    <ul class="p-2 min-w-[180px] rounded-lg shadow-xl absolute top-14 right-0 z-10 border border-gray-200 bg-white dropdown-list">
+                        <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">english</span>
+                        </li>
+                        <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                            <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                            <span class="text-heading capitalize text-sm">arabic</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="primary-button h-10 lg:h-12 px-6! hidden lg:flex items-center">Login</button>
+                <button id="mobile-menu-btn" data-drawer="#mobile-menu" class="lg:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 rounded-lg cursor-pointer" aria-label="Toggle menu">
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                    <span class="hamburger-line block w-5 h-[2px] bg-heading rounded-full transition-all duration-300"></span>
+                </button>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="drawer">
+        <div class="drawer-content">
+            <div class="flex justify-between items-center mb-8">
+                <a href="#">
+                    <img src="/images/logo.png" class="h-8">
+                </a>
+                <button class="drawer-close w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer" aria-label="Close menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-2 mb-6">
+                <li><a href="/index.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Home</a></li>
+                <li><a href="/restaurant.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Restaurant</a></li>
+                <li><a href="/partner.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Partner</a></li>
+                <li><a href="/about-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">About Us</a></li>
+                <li><a href="/contact-us.html" class="block py-3 px-4 text-lg font-medium text-heading rounded-xl hover:bg-[#FFF7F0] transition-colors">Contact Us</a></li>
+            </ul>
+            <div class="relative dropdown-group w-full lg:hidden mb-6">
+                <button class="flex items-center justify-center gap-1.5 w-full rounded-3xl capitalize text-sm font-medium h-10 lg:h-12 px-4 lg:px-6 border transition text-heading bg-white border-[#EFF0F6] dropdown-btn">
+                    <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full shrink-0">
+                    <span class="whitespace-nowrap">english</span>
+                </button>
+                <ul class="p-2 min-w-[180px] w-full rounded-lg shadow-xl absolute top-14 right-0 z-10 border border-gray-200 bg-white dropdown-list">
+                    <li data-dir="ltr" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/us.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">english</span>
+                    </li>
+                    <li data-dir="rtl" class="flex items-center gap-2 py-1.5 px-2.5 rounded-md cursor-pointer hover:bg-gray-100">
+                        <img src="/images/flag/saudi-arabia.png" alt="flag" class="w-4 h-4 rounded-full">
+                        <span class="text-heading capitalize text-sm">arabic</span>
+                    </li>
+                </ul>
+            </div>
+            <button class="primary-button h-10 lg:h-12 px-6! lg:hidden flex items-center w-full justify-center">Login</button>
+        </div>
+    </div>
+
+    <!--========================
+          HERO PART START
+    ==========================-->
+    <section class="pb-12 sm:pb-24 pt-40">
+        <div class="container">
+            <div class="max-w-[635px] mx-auto mb-16">
+                <h1 class="hero-heading text-center! font-semibold!">Terms & conditions</h1>
+            </div>
+            <div>
+                <p>Welcome to Bontado ("Bontado", "we", "our", or "us"). These Terms & Conditions ("Terms") govern your access to and use of the Bontado platform, website, applications, marketplace, and related services (collectively, the "Services").
+By accessing or using our Services, you agree to be bound by these Terms. If you do not agree, you may not use the Services.</p>
+            </div>
+        </div>
+    </section>
+    <!--========================
+           HERO PART END
+    ==========================-->
+
+    <!--========================
+         FOOTER PART START
+    ==========================-->
+    <footer class="container pt-12 sm:pt-24">
+        <nav class="flex justify-between flex-col gap-3 flex-wrap sm:flex-row items-center z-30 transition-all duration-200">
+            <a href="#">
+                <img src="/images/logo.png">
+            </a>
+            <ul class="text-base flex flex-col sm:flex-row gap-3 sm:gap-6 items-center [&_li]:hover:text-primary">
+                <li><a href="">Home</a></li>
+                <li><a href="">Restaurant</a></li>
+                <li><a href="">Partner</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+            <div class="flex gap-2">
+                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+                <div class="w-8 h-8 rounded-full bg-[#EFF0F6] flex items-center justify-center"></div>
+            </div>
+        </nav>
+        <div class="border-t border-[#EFF0F6] py-7 mt-8">
+            <nav class="flex md:justify-between justify-center flex-wrap md:flex-nowrap gap-3 items-center z-30 transition-all duration-200">
+                <span class="text-base">© All rights reserved. Bontado.</span>
+                <ul class="text-base flex gap-3 md:gap-6 items-center [&_li]:hover:text-primary">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="#" class="back-to-top">Back to top</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <!--========================
+          FOOTER PART END
+    ==========================-->
+</body>
+</html>
